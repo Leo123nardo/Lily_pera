@@ -178,19 +178,30 @@ figcaption {
 
 .collage-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño flexible para dispositivos móviles */
+    grid-gap: 20px; /* Espaciado entre figuras */
     justify-items: center;
     margin-top: 20px;
 }
 
-.collage-container img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+figure {
+    text-align: center; /* Centra la imagen y el texto */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+figure img {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    max-width: 250px; /* Establece un tamaño máximo */
+    height: auto; /* Mantén las proporciones */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+figure figcaption {
+    font-size: 0.9em; /* Ajusta el tamaño del texto */
+    color: #555; /* Color del texto */
+    margin-top: 8px; /* Espacio entre la imagen y el texto */
+    font-style: italic; /* Opcional: estilo cursivo */
 }
 
 figure video {
