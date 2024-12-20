@@ -175,4 +175,15 @@ figcaption {
     .collage-container {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
     }
+
+    .collage-container img {
+    max-width: 250px; /* Tamaño diferente para el segundo collage */
+    margin-bottom: 10px;
+}
+
+figure video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
 }
