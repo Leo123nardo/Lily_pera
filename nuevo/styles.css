@@ -176,9 +176,21 @@ figcaption {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
     }
 
-    .collage-container img {
-    max-width: 250px; /* Tamaño diferente para el segundo collage */
-    margin-bottom: 10px;
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.collage-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 figure video {
