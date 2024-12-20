@@ -176,7 +176,7 @@ figcaption {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
     }
 
-.collage-container {
+.collage-container-vertical {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     grid-gap: 15px;
@@ -184,7 +184,7 @@ figcaption {
     margin-top: 20px;
 }
 
-.collage-container img {
+.collage-container-vertical img {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -193,7 +193,7 @@ figcaption {
     transition: transform 0.3s ease;
 }
 
-.collage-container img:hover {
+.collage-container-vertical img:hover {
     transform: scale(1.5); /* Efecto hover */
 
 figure video {
