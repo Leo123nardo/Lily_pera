@@ -193,8 +193,20 @@ figcaption {
     transition: transform 0.3s ease;
 }
 
+.collage-container-vertical figure {
+    text-align: center; /* Centra la imagen y el texto */
+    margin: 0; /* Elimina márgenes externos */
+}
+
 .collage-container-vertical img:hover {
     transform: scale(1.5); /* Efecto hover */
+
+.collage-container-vertical figcaption {
+    font-size: 1em; /* Tamaño de fuente para el comentario */
+    color: #444; /* Color del texto */
+    font-style: italic; /* Cursiva */
+    margin-top: 5px; /* Espacio entre la imagen y el comentario */
+}
 
 figure video {
     border-radius: 10px;
