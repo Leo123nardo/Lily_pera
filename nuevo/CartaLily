@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un detallito para mi corazón de melón</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>💖 14 de Febrero 💖</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="CartaLily.html">Carta para Lily</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="san-valentin">
+            <h2>🎁 Una carta muy especial para ti 💝</h2>
+            <p>Holap Lily hermosa. Descárgalo y ábrelo cuando quieras. Espero que te guste. ❤️</p>
+            
+            <a href="Para ti con amor Lily.pdf" download="Para ti con amor Lily.pdf" class="descargar-boton">
+                📥 Descargar Sorpresa 💕
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Con mucho amor, Leo💖</p>
+    </footer>
+</body>
+</html>
