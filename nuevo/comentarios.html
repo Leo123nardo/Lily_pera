@@ -4,7 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-size: 16px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        #lista-comentarios {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .comentario {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,7 +79,7 @@
           <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
           <a href="Leo.html">Leo y Lily</a>
           <a href="comentarios.html">Comentarios</a>
-             <a href="CartaLily.html">Carta para Lily</a>
+          <a href="CartaLily.html">Carta para Lily</a>
         </nav>
     </header>
 
@@ -31,6 +95,19 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function agregarComentario() {
+            let input = document.getElementById("caja-comentario");
+            let texto = input.value.trim();
+            if (texto !== "") {
+                let lista = document.getElementById("lista-comentarios");
+                let nuevoComentario = document.createElement("div");
+                nuevoComentario.classList.add("comentario");
+                nuevoComentario.textContent = texto;
+                lista.prepend(nuevoComentario);
+                input.value = ""; // Limpiar textarea
+            }
+        }
+    </script>
 </body>
 </html>
