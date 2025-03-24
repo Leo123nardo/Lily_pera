@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lily Leija ❤️</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <style>
+    /* Tus estilos existentes para la página */
     .comments-section {
       width: 80%;
       margin: 20px auto;
       text-align: center;
     }
-    /* Puedes mantener estos estilos si quieres tener una sección de comentarios visualmente coherente */
   </style>
 </head>
 <body>
@@ -27,18 +28,27 @@
     </nav>
   </header>
   <main>
-    <section id="comentarios">
+    <section class="comments-section" id="comentarios">
       <h2>Aquí puedes comentar, corazón</h2>
-      <!-- Eliminamos el formulario de comentarios local -->
-      <!-- Se inserta el widget de Utterances -->
-      < script  src = " https://utteranc.es/client.js "
-        repo = " Leo123nardo/Lily_pera " 
-        issue-term = " url " 
-        theme = " boxy-light " 
-        crossorigin = " anonymous " 
-        async > 
-    </ script >  
+      <!-- Contenedor para Gitalk -->
+      <div id="gitalk-container"></div>
     </section>
   </main>
+  
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'Ov23liawiqxw8NGUPbhq',             // Reemplaza con tu Client ID
+      clientSecret: 'a948e011f97fb07d018c2c35d431aabd2a4f3b80',     // Opcional, evalúa si incluirlo
+      repo: 'lily-comments',                // El repositorio para almacenar los comentarios
+      owner: 'leo123nardo',                 // Tu usuario o el propietario del repo
+      admin: ['leo123nardo'],               // Lista de administradores
+      id: location.pathname,                // Identificador único para cada página
+      distractionFreeMode: false,           // Modo sin distracciones
+      language: 'es',                       // Idioma español
+      title: 'Comentarios'
+    });
+    gitalk.render('gitalk-container');
+  </script>
 </body>
 </html>
