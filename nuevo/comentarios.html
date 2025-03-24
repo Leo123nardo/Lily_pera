@@ -1,49 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentarios</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lily Leija ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .comments-section {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
+    }
+    #comment-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #comment-input {
+      width: 100%;
+      max-width: 500px;
+      height: 100px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      resize: none;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ff7b7b;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #ff4d4d;
+    }
+    #comments-container {
+      margin-top: 20px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .comment-box {
+      background-color: #fff3f3;
+      padding: 10px;
+      border-left: 4px solid #ff7b7b;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Sección de Comentarios</h1>
-        <nav>
-          <a href="nuevo.html">¿Qué está pasando?</a>
-          <a href="Desde que te conocí.html">Desde que te conocí</a>
-          <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-          <a href="Leo.html">Leo y Lily</a>
-          <a href="comentarios.html">Comentarios</a>
-          <a href="CartaLily.html">Carta para Lily</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="comentarios">
-            <h2>Aquí puedes comentar, corazón</h2>
-            <textarea id="caja-comentario" placeholder="Escribe aquí tu comentario Lily..."></textarea>
-            <button onclick="agregarComentario()">Enviar</button>
-
-            <div id="lista-comentarios">
-                <!-- Aquí se mostrarán los comentarios -->
-            </div>
-        </section>
-    </main>
-
-    <script>
-        function agregarComentario() {
-            let input = document.getElementById("caja-comentario");
-            let texto = input.value.trim();
-            if (texto !== "") {
-                let lista = document.getElementById("lista-comentarios");
-                let nuevoComentario = document.createElement("div");
-                nuevoComentario.classList.add("comentario");
-                nuevoComentario.textContent = texto;
-                lista.prepend(nuevoComentario);
-                input.value = ""; // Limpiar textarea
-            }
-        }
-    </script>
+  <header>
+    <h1>Lily Leija</h1>
+    <nav>
+      <a href="nuevo.html">¿Qué está pasando?</a>
+      <a href="Desde que te conocí.html">Desde que te conocí</a>
+      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
+      <a href="Leo.html">Leo y Lily</a>
+      <a href="comentarios.html">Comentarios</a>
+      <a href="CartaLily.html">Carta para Lily</a>
+    </nav>
+  </header>
+  <main>
+    <section class="comments-section" id="comentarios">
+      <h2>Aquí puedes comentar, corazón</h2>
+      <div id="comment-form">
+        <textarea id="comment-input" placeholder="Escribe aquí tu comentario Lily..."></textarea>
+        <button onclick="agregarComentario()">Enviar</button>
+      </div>
+      <div id="comments-container"></div>
+    </section>
+  </main>
+  <script>
+    function guardarComentarios(comentarios) {
+      localStorage.setItem('comentarios', JSON.stringify(comentarios));
+    }
+    function cargarComentarios() {
+      return JSON.parse(localStorage.getItem('comentarios')) || [];
+    }
+    function mostrarComentarios() {
+      const contenedor = document.getElementById("comments-container");
+      contenedor.innerHTML = "";
+      const comentarios = cargarComentarios();
+      comentarios.forEach(function(comentario) {
+        const nuevoComentario = document.createElement("div");
+        nuevoComentario.classList.add("comment-box");
+        nuevoComentario.textContent = comentario;
+        contenedor.prepend(nuevoComentario);
+      });
+    }
+    function agregarComentario() {
+      const input = document.getElementById("comment-input");
+      const texto = input.value.trim();
+      if (texto !== "") {
+        let comentarios = cargarComentarios();
+        comentarios.push(texto);
+        guardarComentarios(comentarios);
+        mostrarComentarios();
+        input.value = "";
+      }
+    }
+    document.addEventListener("DOMContentLoaded", mostrarComentarios);
+  </script>
 </body>
 </html>
