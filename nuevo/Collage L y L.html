@@ -8,11 +8,8 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #ffe6f0;
-      min-height: 100vh;
-      box-sizing: border-box;
+      background-color: #ffe6f0;
     }
 
     header {
@@ -43,37 +40,40 @@
     }
 
     .collage {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      column-count: 4;
+      column-gap: 10px;
+      padding: 20px;
     }
 
     .collage img {
       width: 100%;
-      object-fit: cover;
+      margin-bottom: 10px;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
+      break-inside: avoid;
     }
 
     .collage img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
-    /* Tamaños variables para estilo collage */
-    .collage img:nth-child(2n) {
-      height: 220px;
+    @media (max-width: 1200px) {
+      .collage {
+        column-count: 3;
+      }
     }
 
-    .collage img:nth-child(3n) {
-      height: 300px;
+    @media (max-width: 800px) {
+      .collage {
+        column-count: 2;
+      }
     }
 
-    .collage img:nth-child(4n) {
-      height: 180px;
+    @media (max-width: 500px) {
+      .collage {
+        column-count: 1;
+      }
     }
   </style>
 </head>
