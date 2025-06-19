@@ -1,6 +1,6 @@
 /* Reglas generales */
 body {
-    background-image: url('nubes.jpg'); /* Imagen de fondo */
+    background-image: url('nubes.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,14 +9,30 @@ body {
     padding: 0;
 }
 
+/* ENCABEZADO */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffe0ed;
-    color: #fff;
-    padding: 10px 20px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    background-color: #ff80bf;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header h1 {
@@ -38,7 +54,9 @@ header img {
 nav {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Ajusta el menú en pantallas pequeñas */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav a {
@@ -127,7 +145,7 @@ figcaption {
 /* Collage */
 .collage-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     justify-items: center;
     margin-top: 20px;
@@ -143,42 +161,13 @@ figcaption {
 }
 
 .collage-container img:hover {
-    transform: scale(1.5); /* Efecto hover */
+    transform: scale(1.5);
 }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Cambia el diseño del header a vertical */
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column; /* Enlaces uno debajo del otro */
-        align-items: center;
-        gap: 10px;
-    }
-
-    h2 {
-        font-size: 1.5em; /* Ajusta el tamaño del título */
-    }
-
-    p {
-        font-size: 0.9em; /* Fuente más pequeña */
-        line-height: 1.5; /* Espacio entre líneas */
-    }
-
-    figure img {
-        max-width: 100%; /* Ocupa todo el ancho disponible */
-    }
-
-    .collage-container {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-    }
-
+/* Collage vertical */
 .collage-container-vertical {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     justify-items: center;
     margin-top: 20px;
@@ -193,19 +182,20 @@ figcaption {
     transition: transform 0.3s ease;
 }
 
-.collage-container-vertical figure {
-    text-align: center; /* Centra la imagen y el texto */
-    margin: 0; /* Elimina márgenes externos */
+.collage-container-vertical img:hover {
+    transform: scale(1.5);
 }
 
-.collage-container-vertical img:hover {
-    transform: scale(1.5); /* Efecto hover */
+.collage-container-vertical figure {
+    text-align: center;
+    margin: 0;
+}
 
 .collage-container-vertical figcaption {
-    font-size: 1em; /* Tamaño de fuente para el comentario */
-    color: #444; /* Color del texto */
-    font-style: italic; /* Cursiva */
-    margin-top: 5px; /* Espacio entre la imagen y el comentario */
+    font-size: 1em;
+    color: #444;
+    font-style: italic;
+    margin-top: 5px;
 }
 
 figure video {
@@ -213,7 +203,9 @@ figure video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
 }
-    .comments-section {
+
+/* Comentarios */
+.comments-section {
     width: 80%;
     margin: 20px auto;
     text-align: center;
@@ -267,6 +259,7 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Sección San Valentín */
 #san-valentin {
     text-align: center;
     background: #ffe6ea;
@@ -300,5 +293,39 @@ button:hover {
 .descargar-boton:hover {
     background: #c2185b;
     transform: scale(1.1);
-}    
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+
+    .collage-container {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-container-vertical {
+        grid-template-columns: 1fr;
+    }
 }
