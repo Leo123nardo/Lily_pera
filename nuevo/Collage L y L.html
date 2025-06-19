@@ -39,6 +39,30 @@
       text-decoration: underline;
     }
 
+    .mensaje {
+      padding: 40px 20px 10px;
+      text-align: center;
+    }
+
+    .mensaje h2 {
+      font-size: 2em;
+      color: #cc3366;
+      margin-bottom: 15px;
+    }
+
+    .mensaje p {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      text-align: justify;
+      line-height: 1.6;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
     .collage {
       column-count: 4;
       column-gap: 10px;
@@ -50,12 +74,21 @@
       margin-bottom: 10px;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
       break-inside: avoid;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .collage img:hover {
       transform: scale(1.03);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 1200px) {
@@ -93,6 +126,15 @@
     </nav>
   </header>
 
+  <div class="mensaje">
+    <h2>🌸 Para la persona más especial 🌸</h2>
+    <p>
+      Desde que llegaste a mi vida, todo ha cambiado para mejor. Tu sonrisa ilumina mis días, y tu forma de ser me inspira a ser mejor cada momento. Este espacio está hecho con todo mi amor para recordarte cuánto significas para mí. 
+      Cada imagen aquí es una pequeña parte de todos esos momentos hermosos que hemos compartido. 
+      Gracias por existir, por ser tú, y por regalarme tu compañía. 💖
+    </p>
+  </div>
+  
   <div class="collage">
     <img src="LilyDiminuta.jpeg" alt="Foto 1">
     <img src="Yop13.jpeg" alt="Foto 2">
