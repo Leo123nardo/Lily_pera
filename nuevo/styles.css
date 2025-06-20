@@ -17,7 +17,6 @@ header {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -128,6 +127,12 @@ figcaption {
     text-align: center;
 }
 
+figure video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
 /* Canción */
 .fragmento-cancion {
     display: flex;
@@ -137,34 +142,13 @@ figcaption {
     margin: 20px 0;
     padding: 10px;
     font-family: 'Georgia', serif;
-    font-size: 1.0em;
+    font-size: 1em;
     line-height: 1.8;
     color: #333;
 }
 
 /* Collage */
-.collage-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-    justify-items: center;
-    margin-top: 20px;
-}
-
-.collage-container img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.collage-container img:hover {
-    transform: scale(1.5);
-}
-
-/* Collage vertical */
+.collage-container,
 .collage-container-vertical {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -173,6 +157,7 @@ figcaption {
     margin-top: 20px;
 }
 
+.collage-container img,
 .collage-container-vertical img {
     width: 100%;
     max-width: 300px;
@@ -182,6 +167,7 @@ figcaption {
     transition: transform 0.3s ease;
 }
 
+.collage-container img:hover,
 .collage-container-vertical img:hover {
     transform: scale(1.5);
 }
@@ -196,12 +182,6 @@ figcaption {
     color: #444;
     font-style: italic;
     margin-top: 5px;
-}
-
-figure video {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
 }
 
 /* Comentarios */
@@ -321,10 +301,7 @@ button:hover {
         max-width: 100%;
     }
 
-    .collage-container {
-        grid-template-columns: 1fr;
-    }
-
+    .collage-container,
     .collage-container-vertical {
         grid-template-columns: 1fr;
     }
