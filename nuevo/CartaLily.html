@@ -25,16 +25,20 @@
 <body>
     <header>
     <h1>💖 Lily Leija 💖</h1>
-    <nav>
-      <a href="nuevo.html">¿Qué está pasando?</a>
-      <a href="Desde que te conocí.html">Desde que te conocí</a>
-      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-      <a href="Leo.html">Leo y Lily</a>
-      <a href="comentarios.html">Comentarios</a>
-      <a href="CartaLily.html">Carta para Lily</a>
-      <a href="Cumpleaños.html">Cumpleaños</a>
-      <a href="Collage L y L.html">Collage L y L</a>
-    </nav>
+    <!-- Botón hamburguesa solo visible en móviles -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav id="mobile-menu">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
   </header>
     
     <main>
@@ -56,5 +60,11 @@
         <figure><img src="14conLL.jpeg" alt="14 de Febrero con mi hermosa novia"><figcaption>Un 14 de Febrero innolvidable y con mi hermosisima novia Lily</figcaption></figure>
         </section>
     </main>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("show");
+  }
+</script>
 </body>
 </html>
