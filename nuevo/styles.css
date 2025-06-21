@@ -309,6 +309,9 @@ button:hover {
 
 .menu-toggle {
     display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     background-color: #ff4081;
     color: white;
     font-size: 1.5em;
@@ -316,25 +319,43 @@ button:hover {
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    margin-top: 10px;
+    z-index: 1100;
 }
 
-/* Solo afecta a móviles */
+#mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ff80bf;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto por defecto */
+    width: 200px;
+    height: 100%;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+#mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+}
+
+#mobile-menu.show {
+    left: 0; /* Muestra el menú */
+}
+
+/* Solo para móviles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        margin: 0 auto;
     }
 
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    nav.show {
-        display: flex;
+    header nav {
+        display: none; /* Oculta el nav normal en móviles */
     }
 }
