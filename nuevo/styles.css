@@ -342,7 +342,7 @@ button:hover {
     text-decoration: none;
     padding: 10px 20px;
     font-weight: bold;
-    font-family: 'Brush Script MT', cursive;
+    font-family: Arial, sans-serif;
 }
 
 #mobile-menu.show {
