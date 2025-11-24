@@ -54,7 +54,7 @@
             </div>
         </section>
 
-        <!-- Sección del 14 de Febrero con diseño de álbum -->
+        <!-- Sección del 14 de Febrero -->
         <section class="valentine-section">
             <h2>14/02/2025 - Nuestro Primer San Valentín</h2>
             
@@ -68,69 +68,12 @@
                 <p>De verdad, te amo como no tienes idea y se que lo que te di te encantó, soy el menso más feliz de este universo y ten en cuenta que siempre serán así de bellos. Gracias por llegar a mi vida, ya no hay tristeza en mi corazón y no puedo pedir más porque tu estás aquí. Lo tengo todo Lily.</p>
             </div>
 
-            <!-- Galería tipo álbum para las fotos -->
-            <div class="album-gallery">
-                <div class="gallery-item featured">
-                    <figure>
-                        <img src="14conLL.jpeg" alt="14 de Febrero con mi hermosa novia">
-                        <figcaption>Un 14 de Febrero inolvidable y con mi hermosísima novia Lily</figcaption>
-                    </figure>
-                </div>
-                
-                <!-- Puedes agregar más fotos aquí si las tienes -->
-                <div class="gallery-grid">
-                    <!-- Más recuerdos del día -->
-                    <div class="gallery-item">
-                        <figure>
-                            <img src="14conLL.jpeg" alt="Nuestro primer San Valentín" class="placeholder-img">
-                            <figcaption>Nuestro primer San Valentín juntos 💖</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="gallery-item">
-                        <figure>
-                            <img src="14conLL.jpeg" alt="Momentos especiales" class="placeholder-img">
-                            <figcaption>Momentos que atesoraré por siempre</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de mensajes especiales -->
-        <section class="love-notes">
-            <h2>💌 Mensajes del Corazón</h2>
-            
-            <div class="notes-container">
-                <div class="note-card">
-                    <div class="note-header">
-                        <span class="note-date">14 de Febrero, 2025</span>
-                        <span class="note-heart">💖</span>
-                    </div>
-                    <div class="note-content">
-                        <p>"Cada momento contigo es un regalo del universo. Eres la razón por la que creo en el amor verdadero."</p>
-                    </div>
-                </div>
-                
-                <div class="note-card">
-                    <div class="note-header">
-                        <span class="note-date">Para Siempre</span>
-                        <span class="note-heart">🌸</span>
-                    </div>
-                    <div class="note-content">
-                        <p>"Tu sonrisa ilumina mis días más oscuros. Eres mi sol, mi luna y todas mis estrellas."</p>
-                    </div>
-                </div>
-                
-                <div class="note-card">
-                    <div class="note-header">
-                        <span class="note-date">Eternamente Tuyo</span>
-                        <span class="note-heart">💕</span>
-                    </div>
-                    <div class="note-content">
-                        <p>"No importa cuánto tiempo pase, siempre serás la persona más especial en mi vida. Te amo, Lily."</p>
-                    </div>
-                </div>
+            <!-- Imagen centrada y de tamaño reducido -->
+            <div class="centered-image">
+                <figure>
+                    <img src="14conLL.jpeg" alt="14 de Febrero con mi hermosa novia">
+                    <figcaption>Un 14 de Febrero inolvidable y con mi hermosísima novia Lily</figcaption>
+                </figure>
             </div>
         </section>
     </main>
@@ -141,26 +84,8 @@
             menu.classList.toggle("show");
         }
 
-        // Efectos adicionales para las tarjetas
+        // Efecto para el botón de descarga
         document.addEventListener('DOMContentLoaded', function() {
-            const noteCards = document.querySelectorAll('.note-card');
-            
-            noteCards.forEach((card, index) => {
-                // Efecto de aparición escalonada
-                card.style.animationDelay = `${index * 0.2}s`;
-                card.classList.add('fade-in');
-                
-                // Efecto hover mejorado
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Efecto para el botón de descarga
             const downloadBtn = document.querySelector('.descargar-boton');
             if (downloadBtn) {
                 downloadBtn.addEventListener('click', function() {
@@ -189,12 +114,14 @@
 
         .action-buttons {
             margin: 2rem 0;
+            text-align: center;
         }
 
         .extra-surprise {
             font-style: italic;
             color: #e91e63;
             margin-top: 2rem;
+            text-align: center;
         }
 
         .surprise-link {
@@ -215,117 +142,73 @@
 
         .valentine-section {
             background: linear-gradient(135deg, #fff0f5 0%, #ffe6e6 100%);
+            text-align: center;
         }
 
         .memory-content {
             max-width: 800px;
             margin: 0 auto 2rem;
+            text-align: justify;
         }
 
-        .album-gallery {
-            margin-top: 2rem;
-        }
-
-        .featured {
-            margin-bottom: 2rem;
-        }
-
-        .featured img {
-            max-height: 500px;
-            object-fit: cover;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 1rem;
-        }
-
-        .gallery-item figure {
-            height: 100%;
+        /* Contenedor de imagen centrada */
+        .centered-image {
             display: flex;
-            flex-direction: column;
-        }
-
-        .placeholder-img {
-            height: 200px;
-            background: linear-gradient(45deg, #ff99cc, #ff66b2);
-            display: flex;
-            align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .placeholder-img::before {
-            content: "✨ Foto Especial ✨";
-        }
-
-        .love-notes {
-            background: linear-gradient(135deg, #f8f0ff 0%, #e6f0ff 100%);
-        }
-
-        .notes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 1rem;
-        }
-
-        .note-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #e91e63;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .note-card.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .note-header {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #f0f0f0;
+            margin: 2rem auto;
+            max-width: 600px;
         }
 
-        .note-date {
-            font-weight: 600;
-            color: #e91e63;
+        .centered-image figure {
+            text-align: center;
+            margin: 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .note-heart {
-            font-size: 1.2rem;
+        /* Imagen más pequeña y centrada */
+        .centered-image img {
+            max-width: 400px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
         }
 
-        .note-content p {
+        .centered-image figcaption {
+            margin-top: 1rem;
             font-style: italic;
             color: #666;
-            line-height: 1.6;
-            margin: 0;
+            font-size: 1rem;
+            padding: 0 1rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .notes-container {
-                grid-template-columns: 1fr;
+            .centered-image {
+                max-width: 90%;
             }
             
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .featured img {
+            .centered-image img {
+                max-width: 300px;
                 max-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .centered-image img {
+                max-width: 250px;
+                max-height: 250px;
+            }
+            
+            .centered-image figure {
+                padding: 1rem;
             }
         }
     </style>
