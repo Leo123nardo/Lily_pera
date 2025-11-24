@@ -6,6 +6,113 @@
     <title>Collage L y L</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="lily-icon.png">
+    <style>
+        /* ===================== ESTILOS ESPECÍFICOS PARA EL ÁLBUM ===================== */
+        
+        /* Contenedor principal del álbum */
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Diseño de cuadrícula tipo catálogo */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px 20px;
+        }
+        
+        /* Estilo para cada imagen del catálogo */
+        .gallery img, .gallery video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: #f8f8f8;
+        }
+        
+        /* Efecto hover para las imágenes */
+        .gallery img:hover, .gallery video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Estilo especial para el video */
+        .gallery .video {
+            height: 280px;
+            grid-column: span 2;
+        }
+        
+        /* Título de la sección */
+        .intro h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #e91e63;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Texto introductorio */
+        .intro p {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        /* Responsive para tablets */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 15px;
+            }
+            
+            .gallery img, .gallery video {
+                height: 200px;
+            }
+            
+            .gallery .video {
+                grid-column: span 1;
+                height: 220px;
+            }
+            
+            .intro h2 {
+                font-size: 1.8rem;
+            }
+            
+            .intro p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Responsive para móviles */
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+            
+            .gallery img, .gallery video {
+                height: 150px;
+            }
+            
+            .gallery .video {
+                height: 170px;
+            }
+            
+            .intro h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -44,74 +151,74 @@
     <h2>🌸 ¡FELICES 6 MESES MI LILY BONITA! 🌸</h2>
 
     <p>
-       Holap corazón, ya son 6 maravillos meses y cada uno de ellos los hemos disfrutado como no nos podemos imaginar. Mi vida cambió desde que te conocí, mi mundo tiene los colores más brillantes y radiantes que pueden existir. Cada día le das ese toque unico y especial que es parte de ti, llegaste a mi vida para llenarla de momentos inolvidables, perfectos, increibles, lindos y sobre todo, cada uno de ellos tiene tu esencia. <br> Cada día recuerdo todos esos momentos en los que hemos estado juntos y como no dar una gran sonrisa, si tu me haces muy feliz y no hay día en el que no sea de esa manera. <br> Me haces sentir tan amado y con esa intensidad que te caracteriza, eres mi lugar seguro, en donde puedo ser yo sin importar que, contigo me siento tan seguro, tranquilo y lleno de paz. Eres mi compañera, mi mejor amiga, mi muchacha, el amor de mi vida, mi Lily bonita y dejame decirte que somos el complemento perfecto, somos el uno para el otro. <br> Todo cambió el día que fuimos a patinar, pude platicar contigo de una manera tan natural y así como sigue siendo en la actualidad, lo disfrutamos muchisímo y nos reímos tanto por mis caidas. Por un momento todo se detuvo, tan solo te miré y pude sentir un intenso amor, mismo que con el pasar del tiempo y de los días crece más. En tu mirada, en tu sonrisa, en tu voz y en tu forma de ser me hizo ver lo mucho que te estaba esperando sin siquiera pensarlo. <br> Pasó el tiempo tan rápido que decicí por fin el expresar todo ese sentir y todo ese amor, fue justamente cuando fuimos al boliche porque fue ese mismo día que dio inicio a tan hermosa historia de amor. Como olvidar ese "¿Entonces que somos?" y si se me notaban los nervios desde kilometros, a día de hoy me encanta seguir actualizando la pagina que con todo mi corazón y amor crece y crece más de tantos momentos unicos y bellos, no dejaré de hacerlo. <br> Han sido tan hermosos estos 6 meses, te quiero agradecer con todo mi corazón por siempre estar ahí, por cada detalle, por apoyarme sin importar que y animarme de una manera que ya te digo que siempre me sacas una sonrisa. Muchisimas gracias corazón por ser parte de mis días, por cada risa, por cada noche en el que estamos juntos, por cada llamada, por cada palabra, por cada sonrisa, por cada momento en el que estoy contigo, por permitirme ser parte de tu vida, por siempre ser tu (me derrite su manera de ser, tan unica y tan hermosa), por no dejarme de compartir tu mundo tan colorido y maravilloso.<br> Muchas gracias por tu tiempo, por tu paciencia, por elegirme día con día y vamos a seguirnos desgreñando ehhh. Sigamos creciendo juntos, mi corazón es también tuyo y sigamos viviendo el día a día como mejor sabemos hacerlo. Cada canción de amor que me has dedicado siempre las escucho con tanta emoción y con tanto amor. Siempre pienso en ti cuando las escucho y cada cosa que forma parte de tu vida. Sigamos disfrutando de cada bello momento, de cada día y siempre nos hemos divertido tanto. No sabemos que nos depara el futuro, pero de lo que estoy seguro es que quiero seguir siendo parte de tu vida y no cabe duda. Te amo con todo mi corazón 💖, siempre me voy a preocupar por mi muchacha y ahí estaré en las buenas, en las malas y en las peores. Este espacio está hecho con todo mi amor para recordarte cuánto significas para mí y lo valiosa que eres en mi vida. Cada foto es una pequeña parte de todos esos momentos hermosos que hemos compartido. Gracias por existir, por ser tú, y por regalarme tu compañía :).
+       Holap corazón, ya son 6 maravillosos meses y cada uno de ellos los hemos disfrutado como no nos podemos imaginar. Mi vida cambió desde que te conocí, mi mundo tiene los colores más brillantes y radiantes que pueden existir. Cada día le das ese toque único y especial que es parte de ti, llegaste a mi vida para llenarla de momentos inolvidables, perfectos, increíbles, lindos y sobre todo, cada uno de ellos tiene tu esencia. <br> Cada día recuerdo todos esos momentos en los que hemos estado juntos y como no dar una gran sonrisa, si tú me haces muy feliz y no hay día en el que no sea de esa manera. <br> Me haces sentir tan amado y con esa intensidad que te caracteriza, eres mi lugar seguro, en donde puedo ser yo sin importar qué, contigo me siento tan seguro, tranquilo y lleno de paz. Eres mi compañera, mi mejor amiga, mi muchacha, el amor de mi vida, mi Lily bonita y déjame decirte que somos el complemento perfecto, somos el uno para el otro. <br> Todo cambió el día que fuimos a patinar, pude platicar contigo de una manera tan natural y así como sigue siendo en la actualidad, lo disfrutamos muchísimo y nos reímos tanto por mis caídas. Por un momento todo se detuvo, tan solo te miré y pude sentir un intenso amor, mismo que con el pasar del tiempo y de los días crece más. En tu mirada, en tu sonrisa, en tu voz y en tu forma de ser me hizo ver lo mucho que te estaba esperando sin siquiera pensarlo. <br> Pasó el tiempo tan rápido que decidí por fin el expresar todo ese sentir y todo ese amor, fue justamente cuando fuimos al boliche porque fue ese mismo día que dio inicio a tan hermosa historia de amor. Como olvidar ese "¿Entonces qué somos?" y si se me notaban los nervios desde kilómetros, a día de hoy me encanta seguir actualizando la página que con todo mi corazón y amor crece y crece más de tantos momentos únicos y bellos, no dejaré de hacerlo. <br> Han sido tan hermosos estos 6 meses, te quiero agradecer con todo mi corazón por siempre estar ahí, por cada detalle, por apoyarme sin importar qué y animarme de una manera que ya te digo que siempre me sacas una sonrisa. Muchísimas gracias corazón por ser parte de mis días, por cada risa, por cada noche en el que estamos juntos, por cada llamada, por cada palabra, por cada sonrisa, por cada momento en el que estoy contigo, por permitirme ser parte de tu vida, por siempre ser tú (me derrite su manera de ser, tan única y tan hermosa), por no dejarme de compartir tu mundo tan colorido y maravilloso.<br> Muchas gracias por tu tiempo, por tu paciencia, por elegirme día con día y vamos a seguirnos desgreñando ehhh. Sigamos creciendo juntos, mi corazón es también tuyo y sigamos viviendo el día a día como mejor sabemos hacerlo. Cada canción de amor que me has dedicado siempre las escucho con tanta emoción y con tanto amor. Siempre pienso en ti cuando las escucho y cada cosa que forma parte de tu vida. Sigamos disfrutando de cada bello momento, de cada día y siempre nos hemos divertido tanto. No sabemos qué nos depara el futuro, pero de lo que estoy seguro es que quiero seguir siendo parte de tu vida y no cabe duda. Te amo con todo mi corazón 💖, siempre me voy a preocupar por mi muchacha y ahí estaré en las buenas, en las malas y en las peores. Este espacio está hecho con todo mi amor para recordarte cuánto significas para mí y lo valiosa que eres en mi vida. Cada foto es una pequeña parte de todos esos momentos hermosos que hemos compartido. Gracias por existir, por ser tú, y por regalarme tu compañía :).
     </p>
 </section>
 
 <!-- ===================== COLLAGE MODERNO ===================== -->
 <section class="gallery">
     <!-- Aquí solo pegas tus imágenes, no necesitas modificar nada -->
-    <img src="LilyDiminuta.jpeg" alt="">
-    <img src="Yop13.jpeg" alt="">
-    <img src="LiLyAlien.jpeg" alt="">
-    <img src="LilyconFiltro.jpeg" alt="">
-    <img src="Yop.jpeg" alt="">
-    <img src="LLFelices.jpeg" alt="">
-    <img src="LL1.jpeg" alt="">
-    <img src="Yop7.jpeg" alt="">
-    <img src="Cumpleaños2.jpeg" alt="">
-    <img src="Yop3.jpeg" alt="">
-    <img src="LilyHermosa.jpeg" alt="">
-    <img src="LilyconFiltro3.jpeg" alt="">
-    <img src="Yop14.jpeg" alt="">
-    <img src="LLFelices2.jpeg" alt="">
-    <img src="FF1.jpeg" alt="">
-    <img src="Yop2.jpeg" alt="">
-    <img src="LLGatito.jpeg" alt="">
-    <img src="LilyDiminuta3.jpeg" alt="">
-    <img src="LilyyLeoM.jpeg" alt="">
-    <img src="Yop5.jpeg" alt="">
-    <img src="LilyDormida.jpeg" alt="">
-    <img src="Yop11.jpeg" alt="">
-    <img src="LilyconFlores3.jpeg" alt="">
-    <img src="Coquetas.jpeg" alt="">
-    <img src="LilyFrente.jpeg" alt="">
-    <img src="Yop8.jpeg" alt="">
-    <img src="LilySentada.jpeg" alt="">
-    <img src="LilyconFlores.jpeg" alt="">
-    <img src="FF2.jpeg" alt="">
-    <img src="LilyManejando.jpeg" alt="">
-    <img src="Yop6.jpeg" alt="">
-    <img src="LilyRiendo.jpeg" alt="">
-    <img src="Ternurin.jpeg" alt="">
-    <img src="LilyconFiltro2.jpeg" alt="">
-    <img src="Yop12.jpeg" alt="">
-    <img src="LilyFeliz.jpeg" alt="">
-    <img src="Yop4.jpeg" alt="">
-    <img src="LLFelices3.jpeg" alt="">
-    <img src="Cumpleaños.jpeg" alt="">
-    <img src="Yop10.jpeg" alt="">
-    <img src="LilyBigote.jpeg" alt="">
-    <img src="Yop15.jpeg" alt="">
-    <img src="LilyDiminuta2.jpeg" alt="">
-    <img src="LilyconFlores2.jpeg" alt="">
-    <img src="Yop9.jpeg" alt="">
-    <img src="LilyIALeo.jpeg" alt="">
-    <img src="LLive.jpeg" alt="">
-    <img src="LRoblox.jpeg" alt="">
-    <img src="LilyCaro.jpeg" alt="">
-    <img src="LLLive.jpeg" alt="">
+    <img src="LilyDiminuta.jpeg" alt="Lily">
+    <img src="Yop13.jpeg" alt="Yo">
+    <img src="LiLyAlien.jpeg" alt="Lily Alien">
+    <img src="LilyconFiltro.jpeg" alt="Lily con filtro">
+    <img src="Yop.jpeg" alt="Yo">
+    <img src="LLFelices.jpeg" alt="Lily y Leo felices">
+    <img src="LL1.jpeg" alt="Lily y Leo">
+    <img src="Yop7.jpeg" alt="Yo">
+    <img src="Cumpleaños2.jpeg" alt="Cumpleaños">
+    <img src="Yop3.jpeg" alt="Yo">
+    <img src="LilyHermosa.jpeg" alt="Lily hermosa">
+    <img src="LilyconFiltro3.jpeg" alt="Lily con filtro">
+    <img src="Yop14.jpeg" alt="Yo">
+    <img src="LLFelices2.jpeg" alt="Lily y Leo felices">
+    <img src="FF1.jpeg" alt="Foto familiar">
+    <img src="Yop2.jpeg" alt="Yo">
+    <img src="LLGatito.jpeg" alt="Lily y Leo con gatito">
+    <img src="LilyDiminuta3.jpeg" alt="Lily diminuta">
+    <img src="LilyyLeoM.jpeg" alt="Lily y Leo">
+    <img src="Yop5.jpeg" alt="Yo">
+    <img src="LilyDormida.jpeg" alt="Lily dormida">
+    <img src="Yop11.jpeg" alt="Yo">
+    <img src="LilyconFlores3.jpeg" alt="Lily con flores">
+    <img src="Coquetas.jpeg" alt="Coquetas">
+    <img src="LilyFrente.jpeg" alt="Lily de frente">
+    <img src="Yop8.jpeg" alt="Yo">
+    <img src="LilySentada.jpeg" alt="Lily sentada">
+    <img src="LilyconFlores.jpeg" alt="Lily con flores">
+    <img src="FF2.jpeg" alt="Foto familiar">
+    <img src="LilyManejando.jpeg" alt="Lily manejando">
+    <img src="Yop6.jpeg" alt="Yo">
+    <img src="LilyRiendo.jpeg" alt="Lily riendo">
+    <img src="Ternurin.jpeg" alt="Ternurín">
+    <img src="LilyconFiltro2.jpeg" alt="Lily con filtro">
+    <img src="Yop12.jpeg" alt="Yo">
+    <img src="LilyFeliz.jpeg" alt="Lily feliz">
+    <img src="Yop4.jpeg" alt="Yo">
+    <img src="LLFelices3.jpeg" alt="Lily y Leo felices">
+    <img src="Cumpleaños.jpeg" alt="Cumpleaños">
+    <img src="Yop10.jpeg" alt="Yo">
+    <img src="LilyBigote.jpeg" alt="Lily con bigote">
+    <img src="Yop15.jpeg" alt="Yo">
+    <img src="LilyDiminuta2.jpeg" alt="Lily diminuta">
+    <img src="LilyconFlores2.jpeg" alt="Lily con flores">
+    <img src="Yop9.jpeg" alt="Yo">
+    <img src="LilyIALeo.jpeg" alt="Lily y Leo">
+    <img src="LLive.jpeg" alt="Lily en vivo">
+    <img src="LRoblox.jpeg" alt="Lily en Roblox">
+    <img src="LilyCaro.jpeg" alt="Lily y Caro">
+    <img src="LLLive.jpeg" alt="Lily y Leo en vivo">
 
     <video src="LMETRO.mp4" controls class="video"></video>
 
-    <img src="LLFeria2.jpeg" alt="">
-    <img src="LilyIALeo2.jpeg" alt="">
-    <img src="MihermosaLily.jpeg" alt="">
-    <img src="LNCR.jpeg" alt="">
-    <img src="LLA.jpeg" alt="">
-    <img src="LilyIALeo3.jpeg" alt="">
-    <img src="LLFeria3.jpeg" alt="">
-    <img src="LLLive2.jpeg" alt="">
+    <img src="LLFeria2.jpeg" alt="Lily y Leo en la feria">
+    <img src="LilyIALeo2.jpeg" alt="Lily y Leo">
+    <img src="MihermosaLily.jpeg" alt="Mi hermosa Lily">
+    <img src="LNCR.jpeg" alt="Lily en NCR">
+    <img src="LLA.jpeg" alt="Lily y Leo">
+    <img src="LilyIALeo3.jpeg" alt="Lily y Leo">
+    <img src="LLFeria3.jpeg" alt="Lily y Leo en la feria">
+    <img src="LLLive2.jpeg" alt="Lily y Leo en vivo">
 </section>
 
 <script>
@@ -119,6 +226,5 @@ function toggleMenu() {
     document.getElementById("mobile-menu").classList.toggle("show");
 }
 </script>
-
 </body>
 </html>
