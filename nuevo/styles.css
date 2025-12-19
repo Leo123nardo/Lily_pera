@@ -195,7 +195,11 @@ video {
   border-radius: 12px;
 }
 
-img:hover, video:hover {
+img:hover {
+    transform: scale(1.02);
+}
+
+video:hover {
     transform: scale(1.02);
 }
 
@@ -599,6 +603,7 @@ a:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 
 
