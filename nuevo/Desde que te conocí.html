@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desde que te conocí</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="lily-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desde que te conocí</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="lily-icon.png">
 </head>
+
 <body>
-    <header>
-    <h1>💖 Lily Leija 💖</h1>
-    <nav>
-      <a href="nuevo.html">¿Qué está pasando?</a>
-      <a href="Desde que te conocí.html">Desde que te conocí</a>
-      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-      <a href="Leo.html">Leo y Lily</a>
-      <a href="comentarios.html">Comentarios</a>
-      <a href="CartaLily.html">Carta para Lily</a>
-      <a href="Cumpleaños.html">Cumpleaños</a>
-      <a href="Collage L y L.html">Collage L y L</a>
-    </nav>
-  </header>
-    <section>
-        <h2>Desde que te conocí</h2>
-        <p>No olvido el primer día en el que comencé a hablar contigo. Fue exactamente un 26 de julio, y a partir de ahí no hubo un solo día en el que dejáramos de hablar. No negaré que, al inicio, me sentía muy nervioso y me preguntaba muchas cosas, como: ¿le caeré bien?, ¿me seguirá hablando?, ¿qué pensará de mí?, entre muchas otras. <br>
-Con el paso del tiempo, y sin darnos cuenta, poco a poco nos fuimos desenvolviendo. Hasta la fecha compartimos nuestros gustos, hablamos de cualquier tema, nos contamos los chismes, bromeamos, nos reímos, peleamos, jugamos, nos apoyamos en las buenas y en las malas. Hablamos sobre nuestros días, y la lista sigue, porque son una infinidad de cosas. Todo eso me encanta, y sé que es mutuo. Sabemos que es algo que no dejaremos de hacer, y bien dicen que nunca terminas de conocer por completo a alguien. <br>
-Siempre pensaba en el día en que nos íbamos a conocer en persona. Es verdad que yo te veía de lejitos y no tenía el valor de acercarme, aunque fuera solo para saludarte. Las cosas se dieron cuando me invitaste a ir a la biblioteca. Yo se que fue solo un ratito, pero yo estaba muy emocionado; quería conocer a la persona que siempre está ahí para mí. <br>
-Cómo olvidar el día en que salimos a patinar. Creo que ninguno de los dos lo olvidará por varias razones, como, por ejemplo, mi completa inexperiencia en el patinaje, descubrí que me gustaba el piso porque no hacía más que besarlo de tanto caerme, tuve a una excelente guía y maestra, hiciste mucho para enseñarme, incluso cuando te caíste conmigo. Entre risas y momentos únicos, ese día se volvió inolvidable. <br>
-La verdad, me divertí mucho, y siempre será una garantía estando contigo. Como dije, nunca olvidaré ese día por las razones que mencioné y no solo por eso, también fue el día en que pude apreciar aún más tu belleza y el tener una conversación tan bonita estando ahí. Después de eso, siento que nos hicimos más cercanos y tuve la oportunidad de verte más seguido. Esos ratitos, por más cortos que fueran, como me gustan, y sabes lo mucho que me divierto contigo. Puedo decir con gran certeza que cada día es un momento inolvidable porque eres parte de mi vida. <br>
-Cuando dije que este año no podía pasarme algo bonito, tu llegaste a mi vida cuando menos lo esperaba. Al principio éramos completos desconocidos, y ahora te has convertido en la niña a la que jamás quiero perder ni dejar de hablar. Mi mundo ahora es más colorido, lleno de vida y el mejor de todos, porque tú eres parte de él. Veo las cosas con los colores más brillantes y lindos que pueden existir. Siempre estaré tan agradecido por todo lo que haces por mí día a día. Sé que a veces tenemos malos ratos, pero al final siempre logras sacarme una sonrisa. Con un mensaje tuyo, no tienes idea de lo feliz que soy, y no miento cuando digo que siempre los espero con mucha emoción. <br>
-Sabes que siempre estaré para ti, te escucharé y apoyaré sin importar que, celebraremos nuestros logros, haremos cosas que nos gusten y haré hasta lo imposible para que puedas sonreír en los momentos difíciles y poder ver esa bonita sonrisa que tienes. <br>
-Todo eso significa mucho para mí, y sé que para ti también. He aprendido tantas cosas de ti que, sin exagerar, me he vuelto una persona más fuerte, con más determinación y más optimista. Se podría decir que tengo un poquito de tu esencia. <br>
-Hay muchos momentos hermosos en la vida, pero sin duda alguna el mejor de ellos fue cuando te conocí. Si crees que es todo lo que te tengo, pues no es así y aún hay más eh. Ve a la siguiente sección.</p>
-    </section>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <h1 class="logo">💖 Lily Leija 💖</h1>
+
+  <nav class="nav-desktop">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html" class="active">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+
+  <nav id="mobile-menu" class="nav-mobile">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main>
+
+  <section>
+    <h2>Desde que te conocí</h2>
+
+    <p>
+      No olvido el primer día en el que comencé a hablar contigo. Fue exactamente un 26 de julio, y a partir de ahí no hubo un solo día en el que dejáramos de hablar. No negaré que, al inicio, me sentía muy nervioso y me preguntaba muchas cosas, como: ¿le caeré bien?, ¿me seguirá hablando?, ¿qué pensará de mí?, entre muchas otras. <br>
+      Con el paso del tiempo, y sin darnos cuenta, poco a poco nos fuimos desenvolviendo. Hasta la fecha compartimos nuestros gustos, hablamos de cualquier tema, nos contamos los chismes, bromeamos, nos reímos, peleamos, jugamos, nos apoyamos en las buenas y en las malas. Hablamos sobre nuestros días, y la lista sigue, porque son una infinidad de cosas. Todo eso me encanta, y sé que es mutuo. Sabemos que es algo que no dejaremos de hacer, y bien dicen que nunca terminas de conocer por completo a alguien. <br>
+      Siempre pensaba en el día en que nos íbamos a conocer en persona. Es verdad que yo te veía de lejitos y no tenía el valor de acercarme, aunque fuera solo para saludarte. Las cosas se dieron cuando me invitaste a ir a la biblioteca. Yo se que fue solo un ratito, pero yo estaba muy emocionado; quería conocer a la persona que siempre está ahí para mí. <br>
+      Cómo olvidar el día en que salimos a patinar. Creo que ninguno de los dos lo olvidará por varias razones, como, por ejemplo, mi completa inexperiencia en el patinaje, descubrí que me gustaba el piso porque no hacía más que besarlo de tanto caerme, tuve a una excelente guía y maestra, hiciste mucho para enseñarme, incluso cuando te caíste conmigo. Entre risas y momentos únicos, ese día se volvió inolvidable. <br>
+      La verdad, me divertí mucho, y siempre será una garantía estando contigo. Como dije, nunca olvidaré ese día por las razones que mencioné y no solo por eso, también fue el día en que pude apreciar aún más tu belleza y el tener una conversación tan bonita estando ahí. Después de eso, siento que nos hicimos más cercanos y tuve la oportunidad de verte más seguido. Esos ratitos, por más cortos que fueran, como me gustan, y sabes lo mucho que me divierto contigo. Puedo decir con gran certeza que cada día es un momento inolvidable porque eres parte de mi vida. <br>
+      Cuando dije que este año no podía pasarme algo bonito, tu llegaste a mi vida cuando menos lo esperaba. Al principio éramos completos desconocidos, y ahora te has convertido en la niña a la que jamás quiero perder ni dejar de hablar. Mi mundo ahora es más colorido, lleno de vida y el mejor de todos, porque tú eres parte de él. Veo las cosas con los colores más brillantes y lindos que pueden existir. Siempre estaré tan agradecido por todo lo que haces por mí día a día. Sé que a veces tenemos malos ratos, pero al final siempre logras sacarme una sonrisa. Con un mensaje tuyo, no tienes idea de lo feliz que soy, y no miento cuando digo que siempre los espero con mucha emoción. <br>
+      Sabes que siempre estaré para ti, te escucharé y apoyaré sin importar que, celebraremos nuestros logros, haremos cosas que nos gusten y haré hasta lo imposible para que puedas sonreír en los momentos difíciles y poder ver esa bonita sonrisa que tienes. <br>
+      Todo eso significa mucho para mí, y sé que para ti también. He aprendido tantas cosas de ti que, sin exagerar, me he vuelto una persona más fuerte, con más determinación y más optimista. Se podría decir que tengo un poquito de tu esencia. <br>
+      Hay muchos momentos hermosos en la vida, pero sin duda alguna el mejor de ellos fue cuando te conocí. Si crees que es todo lo que te tengo, pues no es así y aún hay más eh. Ve a la siguiente sección.
+    </p>
+  </section>
+</main>
+<script>
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
