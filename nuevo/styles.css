@@ -142,11 +142,26 @@ p {
 }
 
 /* ===================== GALERÍAS Y COLLAGES ===================== */
-.collage-container, .collage-container-vertical {
+.collage-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
     margin: 2rem 0;
+}
+
+.collage-container-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.collage-container-vertical img {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 figure {
@@ -580,4 +595,5 @@ a:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
