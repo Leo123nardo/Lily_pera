@@ -149,6 +149,14 @@ p {
     margin: 2rem 0;
 }
 
+.collage-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
 .collage-container-vertical {
   display: flex;
   flex-direction: column;
@@ -177,18 +185,6 @@ figure {
 figure:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-img {
-    width: auto;
-    max-width: 250%;
-    max-height: 300px; /* Controla la altura máxima */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: block;
-    margin: 0 auto;
 }
 
 video {
@@ -603,6 +599,7 @@ a:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 
 
