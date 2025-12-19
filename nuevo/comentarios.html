@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Comentarios para mi corazón</title>
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <link rel="icon" type="image/png" href="lily-icon.png">
-  <style>
-    .comments-section {
-      width: 80%;
-      margin: 20px auto;
-      text-align: center;
-    }
-  </style>
 </head>
+
 <body>
-  <header>
-    <h1>💖 Lily Leija 💖</h1>
-    <nav>
-      <a href="nuevo.html">¿Qué está pasando?</a>
-      <a href="Desde que te conocí.html">Desde que te conocí</a>
-      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-      <a href="Leo.html">Leo y Lily</a>
-      <a href="comentarios.html">Comentarios</a>
-      <a href="CartaLily.html">Carta para Lily</a>
-      <a href="Cumpleaños.html">Cumpleaños</a>
-      <a href="Collage L y L.html">Collage L y L</a>
-    </nav>
-  </header>
-  <main>
-    <section class="comments-section" id="comentarios">
-      <h2>Aquí puedes comentar, corazón</h2>
-      <!-- Contenedor para Gitalk -->
-      <div id="gitalk-container"></div>
-    </section>
-  </main>
-  
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    var gitalk = new Gitalk({
-      clientID: 'Ov23liawiqxw8NGUPbhq',             // Reemplaza con tu Client ID
-      clientSecret: 'a948e011f97fb07d018c2c35d431aabd2a4f3b80',     // Opcional, evalúa si incluirlo
-      repo: 'Lily_pera',                // El repositorio para almacenar los comentarios
-      owner: 'Leo123nardo',                 // Tu usuario o el propietario del repo
-      admin: ['Leo123nardo'],               // Lista de administradores
-      id: location.pathname,                // Identificador único para cada página
-      distractionFreeMode: false,           // Modo sin distracciones
-      language: 'es',                       // Idioma español
-      title: 'Comentarios'
-    });
-    gitalk.render('gitalk-container');
-  </script>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <h1 class="logo">💖 Lily Leija 💖</h1>
+
+  <nav class="nav-desktop">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html" class="active">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+
+  <nav id="mobile-menu" class="nav-mobile">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main>
+
+  <section>
+    <h2>Aquí puedes comentar, corazón</h2>
+
+    <!-- Gitalk -->
+    <div id="gitalk-container"></div>
+  </section>
+
+</main>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("show");
+}
+
+var gitalk = new Gitalk({
+  clientID: 'Ov23liawiqxw8NGUPbhq',
+  clientSecret: 'a948e011f97fb07d018c2c35d431aabd2a4f3b80',
+  repo: 'Lily_pera',
+  owner: 'Leo123nardo',
+  admin: ['Leo123nardo'],
+  id: location.pathname,
+  distractionFreeMode: false,
+  language: 'es',
+  title: 'Comentarios'
+});
+
+gitalk.render('gitalk-container');
+</script>
+
 </body>
 </html>
