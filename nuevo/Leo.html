@@ -6,70 +6,81 @@
   <title>Lily y Leo</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="lily-icon.png">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background-image:url('nubes.jpg'); background-size:cover; background-position:center; }
-    header { background-color:#ff80bf; padding:20px; text-align:center; position:sticky; top:0; z-index:1000; }
-    header h1 { margin:0; font-size:2em; color:white; }
-    nav { margin-top:10px; }
-    nav a { margin:0 8px; text-decoration:none; color:white; font-weight:bold; }
-    main { max-width:900px; margin:20px auto; padding:0 10px; }
-    h2 { text-align:center; font-family:'Dancing Script', cursive; font-size:1.8em; color:#d63384; margin:40px 0 20px; }
-    p { text-align:justify; line-height:1.6; margin-bottom:20px; }
-    .collage-container, .collage-container-vertical { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:15px; margin-bottom:20px; }
-    figure { text-align:center; margin-bottom:20px; }
-    img, video { width:100%; max-width:300px; border-radius:10px; }
-    figure video { max-width:400px; }
-    figcaption { margin-top:8px; font-style:italic; color:#555; }
-  </style>
 </head>
+
 <body>
-  <header>
-    <h1>💖 Lily Leija 💖</h1>
-    <nav>
-      <a href="nuevo.html">¿Qué está pasando?</a>
-      <a href="Desde que te conocí.html">Desde que te conocí</a>
-      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-      <a href="Leo.html">Leo y Lily</a>
-      <a href="comentarios.html">Comentarios</a>
-      <a href="CartaLily.html">Carta para Lily</a>
-      <a href="Cumpleaños.html">Cumpleaños</a>
-      <a href="Collage L y L.html">Collage L y L</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Lily y Leo</h2>
-      <p>Lily, esta es mi manera de decirte que me gustas mucho. Ya no puedo esconder este sentimiento y es muy grande. Aquí solo seré Leo, contigo me siento tan bien, puedo ser yo mismo y se que nunca me vas a juzgar. Siento que nos hemos adaptado muy bien el uno al otro, me gusta que sea de esa manera. Te quiero con todo mi corazón, estás en un lugar muy importante en el y no hay día en el que no sea feliz. Eres muy especial, simplemente con el hecho de existir ya me alegraste por completo. Coincidir contigo fue lo más hermoso que me pudo haber pasado <3. <br>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <h1 class="logo">💖 Lily Leija 💖</h1>
+
+  <nav class="nav-desktop">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html" class="active">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+
+  <nav id="mobile-menu" class="nav-mobile">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main>
+
+  <section>
+    <h2>Lily y Leo</h2>
+    <p>
+      Lily, esta es mi manera de decirte que me gustas mucho. Ya no puedo esconder este sentimiento y es muy grande. Aquí solo seré Leo, contigo me siento tan bien, puedo ser yo mismo y se que nunca me vas a juzgar. Siento que nos hemos adaptado muy bien el uno al otro, me gusta que sea de esa manera. Te quiero con todo mi corazón, estás en un lugar muy importante en el y no hay día en el que no sea feliz. Eres muy especial, simplemente con el hecho de existir ya me alegraste por completo. Coincidir contigo fue lo más hermoso que me pudo haber pasado <3. <br>
       No puedo dejar de sentir una inmensa alegría por todo esto, te quiero conocer cada día y estar contigo toda una vida. Y las que siguen después de esta y mira que soy muy afortunado de que estés en mi vida mi queridísima novia. <br>
-      Mira tu collage de victorias en el UNO, te diré que poco a poco vas cosechando más y más. No importa que tipo de UNO sea, siempre me vas a terminar dando una buena arrastrada y que encanta que sea así.</p>
-      <p>Cabe resaltar que también agregué ese bendito perro que me dibujaste.</p>
-      <div class="collage-container">
-        <img src="r1.jpeg" alt="Victoria de Lily 1">
-        <img src="r2.jpeg" alt="Victoria de Lily 2">
-        <img src="r3.jpeg" alt="Victoria de Lily 3">
-        <img src="r4.jpeg" alt="Victoria de Lily 4">
-        <img src="r5.jpeg" alt="Victoria de Lily 5">
-        <img src="r6.jpeg" alt="Victoria de Lily 6">
-        <img src="r7.jpeg" alt="Victoria de Lily 7">
-        <img src="r8.jpeg" alt="Victoria de Lily 8">
-        <img src="r9.jpeg" alt="Victoria de Lily 9">
-        <img src="U1.jpeg" alt="Victoria de Lily 10">
-        <img src="U2.jpeg" alt="Victoria de Lily 11">
-        <img src="U3.jpeg" alt="Victoria de Lily 12">
-        <img src="U4.jpeg" alt="Victoria de Lily 13">
-        <img src="U5.jpeg" alt="Victoria de Lily 14">
-        <img src="Perro.jpeg" alt="Una verdadera artista">
-      </div>
-    </section>
+      Mira tu collage de victorias en el UNO, te diré que poco a poco vas cosechando más y más. No importa que tipo de UNO sea, siempre me vas a terminar dando una buena arrastrada y que encanta que sea así.
+    </p>
+    
+    <p>
+      Cabe resaltar que también agregué ese bendito perro que me dibujaste.
+    </p>
 
-    <figure>
-      <video controls>
-        <source src="intro.mp4" type="video/mp4">
-      </video>
-      <figcaption>Un pequeño adelanto de lo que se viene</figcaption>
-    </figure>
+    <div class="collage-container">
+      <img src="r1.jpeg" alt="Victoria de Lily 1">
+      <img src="r2.jpeg" alt="Victoria de Lily 2">
+      <img src="r3.jpeg" alt="Victoria de Lily 3">
+      <img src="r4.jpeg" alt="Victoria de Lily 4">
+      <img src="r5.jpeg" alt="Victoria de Lily 5">
+      <img src="r6.jpeg" alt="Victoria de Lily 6">
+      <img src="r7.jpeg" alt="Victoria de Lily 7">
+      <img src="r8.jpeg" alt="Victoria de Lily 8">
+      <img src="r9.jpeg" alt="Victoria de Lily 9">
+      <img src="U1.jpeg" alt="Victoria de Lily 10">
+      <img src="U2.jpeg" alt="Victoria de Lily 11">
+      <img src="U3.jpeg" alt="Victoria de Lily 12">
+      <img src="U4.jpeg" alt="Victoria de Lily 13">
+      <img src="U5.jpeg" alt="Victoria de Lily 14">
+      <img src="Perro.jpeg" alt="Una verdadera artista">
+    </div>
+  </section>
 
-    <!-- Fecha 19/12/2024 -->
+  <figure>
+    <video controls>
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+    <figcaption>Un pequeño adelanto de lo que se viene</figcaption>
+  </figure>
+
+<!-- Fecha 19/12/2024 -->
     <section>
       <h2>19/12/2024</h2>
       <p>Nos dimos una arrastrada en el Metrobol, pero me encantó demasiado el día y todo gracias a ti. Claro que fue un día inolvidable, pues decidimos unirnos como una pareja y todo lo que conlleva algo tan bello como debe ser. <br>
@@ -164,7 +175,14 @@
       </div>
     </section>
 
-  </main>
+
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
-
