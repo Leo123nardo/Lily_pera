@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Que está pasando?</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="lily-icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Qué está pasando?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="lily-icon.png">
 </head>
+
 <body>
-    <header>
-    <h1>💖 Lily Leija 💖</h1>
-    <nav>
-      <a href="nuevo.html">¿Qué está pasando?</a>
-      <a href="Desde que te conocí.html">Desde que te conocí</a>
-      <a href="Qué significas para mi.html">¿Qué significas para mi?</a>
-      <a href="Leo.html">Leo y Lily</a>
-      <a href="comentarios.html">Comentarios</a>
-      <a href="CartaLily.html">Carta para Lily</a>
-      <a href="Cumpleaños.html">Cumpleaños</a>
-      <a href="Collage L y L.html">Collage L y L</a>
-    </nav>
-  </header>
-    <section>
-        <h2>¿Qué está pasando?</h2>
-        <p>Te preguntarás que es lo que tus bellos ojos están viendo. Esto es para ti, quiero que sepas lo que pienso y siento en realidad por ti.<br>
-           Aunque creo que es demasiado obvio y no trato de esconderlo. Es un sentimiento que con el pasar del tiempo se fue intensificando y haciendo más fuerte día con día. Te invito a que tu misma lo descubras y espero te guste lo que con tanto cariño hice para ti.</p>
-        <figure>
-        <img src="ternurin.webp" alt="Descripción de la imagen">
-        <figcaption>Broma, si te quiero muchísimo</figcaption>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <h1 class="logo">💖 Lily Leija 💖</h1>
+
+  <nav class="nav-desktop">
+    <a href="nuevo.html" class="active">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+
+  <nav id="mobile-menu" class="nav-mobile">
+    <a href="nuevo.html">¿Qué está pasando?</a>
+    <a href="Desde que te conocí.html">Desde que te conocí</a>
+    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
+    <a href="Leo.html">Leo y Lily</a>
+    <a href="comentarios.html">Comentarios</a>
+    <a href="CartaLily.html">Carta para Lily</a>
+    <a href="Cumpleaños.html">Cumpleaños</a>
+    <a href="Collage L y L.html">Collage L y L</a>
+  </nav>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main>
+
+  <section>
+    <h2>¿Qué está pasando?</h2>
+
+    <p>
+      Te preguntarás que es lo que tus bellos ojos están viendo. Esto es para ti, quiero que sepas lo que pienso y siento en realidad por ti. <br>
+      Aunque creo que es demasiado obvio y no trato de esconderlo. Es un sentimiento que con el pasar del tiempo se fue intensificando y haciendo más fuerte día con día. Te invito a que tu misma lo descubras y espero te guste lo que con tanto cariño hice para ti.
+    </p>
+
+    <figure>
+      <img src="ternurin.webp" alt="Descripción de la imagen">
+      <figcaption>Broma, si te quiero muchísimo</figcaption>
     </figure>
-    </section>
+
+  </section>
+
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
