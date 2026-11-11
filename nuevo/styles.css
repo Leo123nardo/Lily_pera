@@ -610,6 +610,77 @@ a:hover {
 
 
 
+
+/* =========================================================
+   AJUSTE VISUAL · PORTADA SIN TARJETAS BLANCAS
+   Mantiene el contenido y la estructura; solo cambia presentación.
+   ========================================================= */
+.romantic-home section {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.romantic-home .romantic-hero {
+  background: transparent;
+}
+
+.romantic-home .counter-card {
+  width: min(100%, 520px);
+  padding: 1.4rem 1rem 1.2rem;
+  border: 0;
+  border-top: 1px solid rgba(199,125,149,.28);
+  border-bottom: 1px solid rgba(199,125,149,.28);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.romantic-home .memory-links {
+  gap: 0;
+  border-top: 1px solid rgba(199,125,149,.25);
+  border-bottom: 1px solid rgba(199,125,149,.25);
+}
+
+.romantic-home .memory-link {
+  min-height: 190px;
+  padding: 1.8rem 1.5rem;
+  border: 0;
+  border-right: 1px solid rgba(199,125,149,.2);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.romantic-home .memory-link:last-child {
+  border-right: 0;
+}
+
+.romantic-home .memory-link:hover {
+  background: rgba(255,255,255,.22);
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .romantic-home .memory-links {
+    border-bottom: 0;
+  }
+  .romantic-home .memory-link {
+    min-height: auto;
+    padding: 1.4rem .5rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(199,125,149,.2);
+  }
+  .romantic-home .memory-link:last-child {
+    border-bottom: 0;
+  }
+}
+
 /* =========================================================
    PORTADA ROMÁNTICA · FASE 1
    Estilos encapsulados para no alterar las demás páginas.
