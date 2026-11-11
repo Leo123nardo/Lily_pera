@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>¿Qué está pasando?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f8">
+  <meta name="description" content="Un pequeño rincón lleno de recuerdos, cariño y momentos especiales para Lily.">
+  <title>Para mi Lily bonita ♥</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="lily-icon.png">
 </head>
+<body class="romantic-home">
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+    <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+  </div>
 
-<body>
+  <header class="header romantic-header">
+    <a class="logo romantic-logo" href="nuevo.html" aria-label="Inicio">Lily <span>&</span> Leo <b>♥</b></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="nuevo.html" class="active">Inicio</a>
+      <a href="Desde que te conocí.html">Nuestra historia</a>
+      <a href="Qué significas para mi.html">Lo que significas</a>
+      <a href="Leo.html">Lily y Leo</a>
+      <a href="comentarios.html">Comentarios</a>
+      <a href="CartaLily.html">Carta</a>
+      <a href="Cumpleaños.html">Cumpleaños</a>
+      <a href="Collage L y L.html">Nuestro álbum</a>
+    </nav>
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Navegación móvil">
+      <a href="nuevo.html">Inicio</a>
+      <a href="Desde que te conocí.html">Nuestra historia</a>
+      <a href="Qué significas para mi.html">Lo que significas</a>
+      <a href="Leo.html">Lily y Leo</a>
+      <a href="comentarios.html">Comentarios</a>
+      <a href="CartaLily.html">Carta</a>
+      <a href="Cumpleaños.html">Cumpleaños</a>
+      <a href="Collage L y L.html">Nuestro álbum</a>
+    </nav>
+  </header>
 
-<!-- ===================== HEADER ===================== -->
-<header class="header">
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <main class="romantic-main">
+    <section class="romantic-hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span>✦</span> Un pequeño universo para ti <span>✦</span></p>
+        <h1 id="hero-title">Para mi <em>Lily</em><br>bonita</h1>
+        <p class="hero-message">De todas las casualidades bonitas de la vida, coincidir contigo siempre será mi favorita.</p>
+        <a class="romantic-cta" href="Collage L y L.html">Descubrir nuestros recuerdos <span aria-hidden="true">→</span></a>
+        <p class="hero-signature">Con todo mi cariño, Leo <span>♥</span></p>
+      </div>
 
-  <h1 class="logo">💖 Lily Leija 💖</h1>
+      <div class="hero-photo-wrap reveal" aria-label="Espacio reservado para una fotografía especial">
+        <div class="photo-placeholder">
+          <span class="placeholder-heart" aria-hidden="true">♡</span>
+          <span class="placeholder-label">Nuestra próxima foto favorita</span>
+          <span class="placeholder-note">Este espacio espera por un recuerdo especial</span>
+        </div>
+        <span class="photo-decoration photo-decoration-one" aria-hidden="true">✿</span>
+        <span class="photo-decoration photo-decoration-two" aria-hidden="true">♡</span>
+      </div>
+      <span class="hero-bottom-note" aria-hidden="true">HECHO CON AMOR · L & L</span>
+    </section>
 
-  <nav class="nav-desktop">
-    <a href="nuevo.html" class="active">¿Qué está pasando?</a>
-    <a href="Desde que te conocí.html">Desde que te conocí</a>
-    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
-    <a href="Leo.html">Leo y Lily</a>
-    <a href="comentarios.html">Comentarios</a>
-    <a href="CartaLily.html">Carta para Lily</a>
-    <a href="Cumpleaños.html">Cumpleaños</a>
-    <a href="Collage L y L.html">Collage L y L</a>
-  </nav>
+    <section class="together-section reveal" aria-labelledby="together-title">
+      <p class="eyebrow">Cada día cuenta</p>
+      <h2 id="together-title">Nuestra historia, día a día</h2>
+      <p class="together-description">Desde aquel 19 de diciembre de 2024, seguimos sumando momentos que guardamos con mucho cariño.</p>
+      <div class="counter-card" role="group" aria-label="Tiempo transcurrido desde el inicio de nuestra relación">
+        <span class="counter-heart" aria-hidden="true">♥</span>
+        <strong id="days-counter" class="days-counter" aria-live="off">—</strong>
+        <span class="counter-label">días juntos</span>
+        <span class="counter-date">Desde el 19 · 12 · 2024</span>
+      </div>
+      <p class="counter-footnote">Y todavía nos quedan muchísimos recuerdos por crear. <span>♡</span></p>
+    </section>
 
-  <nav id="mobile-menu" class="nav-mobile">
-    <a href="nuevo.html">¿Qué está pasando?</a>
-    <a href="Desde que te conocí.html">Desde que te conocí</a>
-    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
-    <a href="Leo.html">Leo y Lily</a>
-    <a href="comentarios.html">Comentarios</a>
-    <a href="CartaLily.html">Carta para Lily</a>
-    <a href="Cumpleaños.html">Cumpleaños</a>
-    <a href="Collage L y L.html">Collage L y L</a>
-  </nav>
-</header>
+    <section class="memory-section reveal" aria-labelledby="memory-title">
+      <p class="eyebrow">Un lugar para nosotros</p>
+      <h2 id="memory-title">Pequeños capítulos de algo muy bonito</h2>
+      <div class="memory-links">
+        <a class="memory-link" href="Desde que te conocí.html">
+          <span class="memory-icon" aria-hidden="true">✧</span>
+          <span class="memory-link-title">Nuestra historia</span>
+          <span class="memory-link-copy">Volvamos al comienzo de todo.</span>
+          <span class="memory-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="memory-link" href="Collage L y L.html">
+          <span class="memory-icon" aria-hidden="true">♡</span>
+          <span class="memory-link-title">Nuestro álbum</span>
+          <span class="memory-link-copy">Fotografías y recuerdos que atesoramos.</span>
+          <span class="memory-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="memory-link" href="CartaLily.html">
+          <span class="memory-icon" aria-hidden="true">✉</span>
+          <span class="memory-link-title">Una carta para ti</span>
+          <span class="memory-link-copy">Palabras que nacen del corazón.</span>
+          <span class="memory-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
-<!-- ===================== CONTENIDO ===================== -->
-<main>
+    <footer class="romantic-footer">
+      <span>Hecho con mucho amor para Lily</span>
+      <span aria-hidden="true">♥</span>
+      <span>Lily & Leo</span>
+    </footer>
+  </main>
 
-  <section>
-    <h2>¿Qué está pasando?</h2>
-
-    <p>
-      Te preguntarás que es lo que tus bellos ojos están viendo. Esto es para ti, quiero que sepas lo que pienso y siento en realidad por ti. Aunque creo que es demasiado obvio y no trato de esconderlo. Es un sentimiento que con el pasar del tiempo se fue intensificando y haciendo más fuerte día con día. Te invito a que tu misma lo descubras y espero te guste lo que con tanto cariño hice para ti.
-    </p>
-
-    <figure>
-      <img src="teamo.jpg" alt="Descripción de la imagen">
-      <figcaption>Te amo muchisimo mi hermosisima Lily <3</figcaption>
-    </figure>
-
-  </section>
-
-</main>
-
-<script>
-function toggleMenu() {
-  document.getElementById("mobile-menu").classList.toggle("show");
-}
-</script>
-
+  <script src="portada.js" defer></script>
 </body>
 </html>
-
-

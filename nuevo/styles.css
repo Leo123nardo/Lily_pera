@@ -608,3 +608,285 @@ a:hover {
 
 
 
+
+
+
+/* =========================================================
+   AJUSTE VISUAL · PORTADA SIN TARJETAS BLANCAS
+   Mantiene el contenido y la estructura; solo cambia presentación.
+   ========================================================= */
+.romantic-home section {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.romantic-home .romantic-hero {
+  background: transparent;
+}
+
+.romantic-home .counter-card {
+  width: min(100%, 520px);
+  padding: 1.4rem 1rem 1.2rem;
+  border: 0;
+  border-top: 1px solid rgba(199,125,149,.28);
+  border-bottom: 1px solid rgba(199,125,149,.28);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.romantic-home .memory-links {
+  gap: 0;
+  border-top: 1px solid rgba(199,125,149,.25);
+  border-bottom: 1px solid rgba(199,125,149,.25);
+}
+
+.romantic-home .memory-link {
+  min-height: 190px;
+  padding: 1.8rem 1.5rem;
+  border: 0;
+  border-right: 1px solid rgba(199,125,149,.2);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.romantic-home .memory-link:last-child {
+  border-right: 0;
+}
+
+.romantic-home .memory-link:hover {
+  background: rgba(255,255,255,.22);
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .romantic-home .memory-links {
+    border-bottom: 0;
+  }
+  .romantic-home .memory-link {
+    min-height: auto;
+    padding: 1.4rem .5rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(199,125,149,.2);
+  }
+  .romantic-home .memory-link:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* =========================================================
+   PORTADA ROMÁNTICA · FASE 1
+   Estilos encapsulados para no alterar las demás páginas.
+   ========================================================= */
+.romantic-home {
+  --romantic-ink: #563c46;
+  --romantic-muted: #8d737d;
+  --romantic-rose: #c86d89;
+  --romantic-deep: #a84e70;
+  --romantic-blush: #f8e5e9;
+  --romantic-cream: #fffaf7;
+  position: relative;
+  overflow-x: hidden;
+  color: var(--romantic-ink);
+  background:
+    radial-gradient(ellipse at 8% 12%, rgba(246, 210, 220, .62), transparent 34rem),
+    radial-gradient(ellipse at 92% 42%, rgba(250, 225, 225, .62), transparent 32rem),
+    linear-gradient(145deg, #fffaf8 0%, #fff4f5 48%, #f9edf0 100%);
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+.romantic-home .romantic-header {
+  min-height: 78px;
+  padding: .85rem clamp(1rem, 4vw, 3.5rem);
+  background: rgba(255, 250, 249, .86);
+  border-bottom: 1px solid rgba(195, 126, 148, .16);
+  box-shadow: 0 8px 30px rgba(116, 65, 82, .045);
+  backdrop-filter: blur(14px);
+  z-index: 20;
+}
+.romantic-home .romantic-logo {
+  color: var(--romantic-ink);
+  font-family: Georgia, serif;
+  font-size: 1.55rem;
+  letter-spacing: .02em;
+  text-decoration: none;
+}
+.romantic-home .romantic-logo span { color: var(--romantic-rose); font-style: italic; }
+.romantic-home .romantic-logo b { color: var(--romantic-rose); font-size: .9rem; }
+.romantic-home .nav-desktop { gap: .25rem; flex-wrap: wrap; justify-content: flex-end; }
+.romantic-home .nav-desktop a {
+  color: #775b66;
+  padding: .55rem .72rem;
+  border-radius: 999px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: .82rem;
+}
+.romantic-home .nav-desktop a:hover,
+.romantic-home .nav-desktop a.active {
+  color: var(--romantic-deep);
+  background: #f8e7ec;
+}
+.romantic-home .menu-toggle { color: var(--romantic-deep); }
+.romantic-home .nav-mobile {
+  background: #fff8f8;
+  border: 1px solid #f0dce2;
+  border-radius: 0 0 16px 16px;
+}
+.romantic-home .nav-mobile a { color: var(--romantic-ink); border-color: #f2e4e8; }
+.romantic-main { max-width: 1240px; margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 4rem); }
+.floating-hearts { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.floating-hearts span {
+  position: absolute; bottom: -8vh; left: var(--heart-left, 10%);
+  color: rgba(199, 105, 139, .22); font-family: Georgia, serif;
+  font-size: var(--heart-size, 1.5rem);
+  animation: romantic-float var(--heart-duration, 19s) linear infinite;
+  animation-delay: var(--heart-delay, 0s);
+}
+.floating-hearts span:nth-child(1) { --heart-left: 7%; --heart-size: 1.4rem; --heart-duration: 21s; }
+.floating-hearts span:nth-child(2) { --heart-left: 18%; --heart-size: 2rem; --heart-duration: 24s; --heart-delay: -8s; }
+.floating-hearts span:nth-child(3) { --heart-left: 31%; --heart-size: 1rem; --heart-duration: 18s; --heart-delay: -4s; }
+.floating-hearts span:nth-child(4) { --heart-left: 44%; --heart-size: 1.7rem; --heart-duration: 25s; --heart-delay: -13s; }
+.floating-hearts span:nth-child(5) { --heart-left: 56%; --heart-size: 1.2rem; --heart-duration: 20s; --heart-delay: -3s; }
+.floating-hearts span:nth-child(6) { --heart-left: 67%; --heart-size: 1.9rem; --heart-duration: 23s; --heart-delay: -11s; }
+.floating-hearts span:nth-child(7) { --heart-left: 77%; --heart-size: 1.1rem; --heart-duration: 19s; --heart-delay: -6s; }
+.floating-hearts span:nth-child(8) { --heart-left: 88%; --heart-size: 1.6rem; --heart-duration: 26s; --heart-delay: -15s; }
+.floating-hearts span:nth-child(9) { --heart-left: 96%; --heart-size: 1rem; --heart-duration: 22s; --heart-delay: -9s; }
+.floating-hearts span:nth-child(10) { --heart-left: 38%; --heart-size: 1.3rem; --heart-duration: 27s; --heart-delay: -18s; }
+@keyframes romantic-float {
+  0% { transform: translate3d(0, 0, 0) rotate(-12deg); opacity: 0; }
+  12% { opacity: .8; }
+  82% { opacity: .65; }
+  100% { transform: translate3d(35px, -115vh, 0) rotate(24deg); opacity: 0; }
+}
+.romantic-hero {
+  position: relative; z-index: 1; min-height: min(760px, calc(100vh - 78px));
+  display: grid; grid-template-columns: 1.05fr .95fr; align-items: center;
+  gap: clamp(2rem, 6vw, 6rem); padding: clamp(4rem, 8vw, 7rem) 0 5rem;
+}
+.hero-copy { max-width: 590px; }
+.eyebrow {
+  margin: 0 0 1rem; color: var(--romantic-rose); text-align: left;
+  font: 600 .75rem/1.5 "Segoe UI", sans-serif; letter-spacing: .2em; text-transform: uppercase;
+}
+.eyebrow span { padding: 0 .35rem; }
+.romantic-hero h1 {
+  margin: 0; color: #563b47; font: 400 clamp(3.5rem, 7.5vw, 6.8rem)/.98 Georgia, serif;
+  letter-spacing: -.065em; text-align: left; text-shadow: none;
+}
+.romantic-hero h1 em { color: var(--romantic-rose); font-weight: 400; }
+.hero-message {
+  max-width: 440px; margin: 1.8rem 0 2rem; color: var(--romantic-muted);
+  font: 1.08rem/1.9 Georgia, serif; text-align: left;
+}
+.romantic-cta {
+  display: inline-flex; align-items: center; gap: 1.1rem; padding: 1rem 1.5rem;
+  color: white; background: linear-gradient(120deg, #cf8098, #ad5b7a);
+  border-radius: 999px; box-shadow: 0 12px 28px rgba(173, 91, 122, .22);
+  font: 600 .88rem "Segoe UI", sans-serif; text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.romantic-cta:hover { color: white; text-decoration: none; transform: translateY(-3px); box-shadow: 0 16px 32px rgba(173, 91, 122, .3); }
+.romantic-cta span { font-size: 1.2rem; }
+.hero-signature { margin: 1.4rem 0 0; color: #9a7c87; font: italic .95rem Georgia, serif; text-align: left; }
+.hero-signature span { color: var(--romantic-rose); }
+.hero-photo-wrap { position: relative; width: min(100%, 470px); justify-self: center; padding: 1.1rem; transform: rotate(2deg); }
+.hero-photo-wrap::before {
+  position: absolute; inset: 0; content: ""; border: 1px solid rgba(194, 124, 147, .36);
+  border-radius: 48% 48% 44% 44% / 42% 42% 48% 48%; transform: rotate(-5deg);
+}
+.photo-placeholder {
+  min-height: 480px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 2rem; text-align: center; border: 9px solid rgba(255,255,255,.9);
+  border-radius: 48% 48% 44% 44% / 42% 42% 48% 48%;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,.75), transparent 34%),
+    linear-gradient(145deg, #f5dfe4, #f9ece9 52%, #eed4dd);
+  box-shadow: 0 25px 65px rgba(126, 76, 94, .14), inset 0 0 0 1px rgba(255,255,255,.7);
+}
+.placeholder-heart { color: #c77891; font: 5rem/1 Georgia, serif; }
+.placeholder-label { margin-top: 1rem; color: #805767; font: 1.35rem Georgia, serif; }
+.placeholder-note { max-width: 230px; margin-top: .7rem; color: #9b7b87; font: .8rem/1.6 "Segoe UI", sans-serif; }
+.photo-decoration { position: absolute; color: #c77d95; text-shadow: 0 4px 15px rgba(173,91,122,.15); }
+.photo-decoration-one { top: 8%; right: 2%; font-size: 2.3rem; }
+.photo-decoration-two { bottom: 9%; left: 0; font-size: 2.6rem; }
+.hero-bottom-note {
+  position: absolute; bottom: 1.5rem; left: 0; color: #c19aa7;
+  font: .62rem "Segoe UI", sans-serif; letter-spacing: .24em;
+}
+.together-section, .memory-section { position: relative; z-index: 1; padding: 5.5rem 0; text-align: center; }
+.together-section { border-top: 1px solid rgba(195,126,148,.18); }
+.together-section .eyebrow, .memory-section .eyebrow { text-align: center; }
+.together-section h2, .memory-section h2 {
+  margin: 0 auto 1rem; color: #604551; font: 400 clamp(2rem, 4vw, 3.3rem)/1.15 Georgia, serif;
+  text-shadow: none;
+}
+.together-description { max-width: 570px; margin: 0 auto 2rem; color: var(--romantic-muted); text-align: center; font: 1rem/1.8 Georgia, serif; }
+.counter-card {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  width: min(100%, 330px); margin: 0 auto; padding: 2rem 2rem 1.7rem;
+  border: 1px solid rgba(199,125,149,.25); border-radius: 22px;
+  background: rgba(255,255,255,.67); box-shadow: 0 18px 48px rgba(121,72,90,.08);
+  backdrop-filter: blur(8px);
+}
+.counter-heart { color: var(--romantic-rose); font-size: 1.2rem; }
+.days-counter { margin-top: .2rem; color: #b75e7d; font: 400 clamp(3.4rem, 8vw, 4.8rem)/1.1 Georgia, serif; letter-spacing: -.05em; }
+.counter-label { color: #785965; font: 1.1rem Georgia, serif; }
+.counter-date { margin-top: 1.1rem; color: #a98c97; font: .72rem "Segoe UI", sans-serif; letter-spacing: .1em; }
+.counter-footnote { margin: 1.5rem 0 0; color: #987b86; font: italic .95rem Georgia, serif; text-align: center; }
+.counter-footnote span { color: var(--romantic-rose); }
+.memory-section { border-top: 1px solid rgba(195,126,148,.18); }
+.memory-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; text-align: left; }
+.memory-link {
+  position: relative; min-height: 205px; padding: 1.7rem; color: var(--romantic-ink);
+  border: 1px solid rgba(199,125,149,.22); border-radius: 18px;
+  background: rgba(255,255,255,.62); text-decoration: none;
+  box-shadow: 0 12px 35px rgba(121,72,90,.045);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.memory-link:hover { color: var(--romantic-ink); text-decoration: none; transform: translateY(-6px); background: #fff; box-shadow: 0 18px 42px rgba(121,72,90,.11); }
+.memory-icon { display: block; margin-bottom: 1.3rem; color: var(--romantic-rose); font-size: 1.8rem; }
+.memory-link-title { display: block; color: #654653; font: 1.35rem Georgia, serif; }
+.memory-link-copy { display: block; margin-top: .55rem; color: #9a7e89; font: .85rem/1.6 "Segoe UI", sans-serif; }
+.memory-arrow { position: absolute; top: 1.5rem; right: 1.5rem; color: #c17b94; }
+.romantic-footer {
+  position: relative; z-index: 1; display: flex; justify-content: center; align-items: center;
+  gap: .8rem; padding: 2rem 0 2.5rem; border-top: 1px solid rgba(195,126,148,.18);
+  color: #a48792; font: .78rem "Segoe UI", sans-serif;
+}
+.romantic-footer span:nth-child(2) { color: var(--romantic-rose); }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 900px) {
+  .romantic-home .nav-desktop { display: none; }
+  .romantic-home .menu-toggle { display: block; }
+  .romantic-hero { min-height: auto; grid-template-columns: 1fr; gap: 3rem; padding: 5rem 0 4rem; }
+  .hero-copy { max-width: 680px; margin: 0 auto; text-align: center; }
+  .romantic-hero .eyebrow, .hero-message, .hero-signature { text-align: center; margin-left: auto; margin-right: auto; }
+  .romantic-hero h1 { text-align: center; }
+  .hero-photo-wrap { width: min(78%, 390px); }
+  .photo-placeholder { min-height: 390px; }
+  .hero-bottom-note { display: none; }
+}
+@media (max-width: 640px) {
+  .romantic-main { padding: 0 1.15rem; }
+  .romantic-hero { padding: 4rem 0 3.5rem; }
+  .romantic-hero h1 { font-size: clamp(3.5rem, 16vw, 5.2rem); }
+  .hero-message { font-size: 1rem; }
+  .hero-photo-wrap { width: min(88%, 340px); }
+  .photo-placeholder { min-height: 330px; }
+  .together-section, .memory-section { padding: 4rem 0; }
+  .memory-links { grid-template-columns: 1fr; }
+  .memory-link { min-height: 160px; }
+  .romantic-footer { flex-wrap: wrap; font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-hearts span { animation: none; display: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .romantic-cta, .memory-link { transition: none; }
+}
