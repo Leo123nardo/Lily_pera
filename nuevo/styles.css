@@ -829,19 +829,22 @@ a:hover {
 .together-description { max-width: 570px; margin: 0 auto 2rem; color: var(--romantic-muted); text-align: center; font: 1rem/1.8 Georgia, serif; }
 .counter-card {
   position: relative; display: flex; flex-direction: column; align-items: center;
-  width: min(100%, 330px); margin: 0 auto; padding: 2rem 2rem 1.7rem;
+  width: min(100%, 680px); margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 2.5rem) 1.7rem;
   border: 1px solid rgba(199,125,149,.25); border-radius: 22px;
-  background: rgba(255,255,255,.67); box-shadow: 0 18px 48px rgba(121,72,90,.08);
+  background: rgba(255,255,255,.48); box-shadow: 0 18px 48px rgba(121,72,90,.06);
   backdrop-filter: blur(8px);
 }
 .counter-heart { color: var(--romantic-rose); font-size: 1.2rem; }
-.days-counter { margin-top: .2rem; color: #b75e7d; font: 400 clamp(3.4rem, 8vw, 4.8rem)/1.1 Georgia, serif; letter-spacing: -.05em; }
-.counter-label { color: #785965; font: 1.1rem Georgia, serif; }
+.time-counter { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.5rem, 2vw, 1.5rem); width: 100%; margin-top: .7rem; }
+.time-unit { display: flex; flex-direction: column; align-items: center; gap: .35rem; }
+.time-value { color: #b75e7d; font: 400 clamp(2rem, 5.5vw, 3.8rem)/1.1 Georgia, serif; letter-spacing: -.05em; font-variant-numeric: tabular-nums; }
+.time-unit span { color: #785965; font: .88rem Georgia, serif; }
+
 .counter-date { margin-top: 1.1rem; color: #a98c97; font: .72rem "Segoe UI", sans-serif; letter-spacing: .1em; }
 .counter-footnote { margin: 1.5rem 0 0; color: #987b86; font: italic .95rem Georgia, serif; text-align: center; }
 .counter-footnote span { color: var(--romantic-rose); }
 .memory-section { border-top: 1px solid rgba(195,126,148,.18); }
-.memory-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; text-align: left; }
+.memory-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; max-width: 850px; margin: 2.5rem auto 0; text-align: left; }
 .memory-link {
   position: relative; min-height: 205px; padding: 1.7rem; color: var(--romantic-ink);
   border: 1px solid rgba(199,125,149,.22); border-radius: 18px;

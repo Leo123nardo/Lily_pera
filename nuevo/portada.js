@@ -4,18 +4,30 @@
 
   const START_DATE = "2024-12-19";
 
-  function updateDaysTogether() {
-    const counter = document.getElementById("days-counter");
-    if (!counter) return;
-
-    // Usar medianoche local evita desfases por zona horaria.
+  function updateTimeTogether() {
     const [year, month, day] = START_DATE.split("-").map(Number);
-    const start = new Date(year, month - 1, day);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    const start = new Date(year, month - 1, day).getTime();
+    const now = Date.now();
+    let remaining = Math.max(0, now - start);
 
-    const elapsed = Math.floor((today.getTime() - start.getTime()) / 86400000);
-    counter.textContent = elapsed >= 0 ? elapsed.toLocaleString("es-MX") : "0";
+    const totalDays = Math.floor(remaining / 86400000);
+    remaining %= 86400000;
+    const hours = Math.floor(remaining / 3600000);
+    remaining %= 3600000;
+    const minutes = Math.floor(remaining / 60000);
+    const seconds = Math.floor((remaining % 60000) / 1000);
+
+    const values = {
+      "days-counter": totalDays.toLocaleString("es-MX"),
+      "hours-counter": String(hours).padStart(2, "0"),
+      "minutes-counter": String(minutes).padStart(2, "0"),
+      "seconds-counter": String(seconds).padStart(2, "0")
+    };
+
+    Object.entries(values).forEach(([id, value]) => {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    });
   }
 
   function setupMobileMenu() {
@@ -60,7 +72,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    updateDaysTogether();
+    updateTimeTogether();
+    window.setInterval(updateTimeTogether, 1000);
     setupMobileMenu();
     setupRevealAnimations();
   });
