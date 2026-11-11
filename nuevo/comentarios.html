@@ -6,7 +6,6 @@
   <title>Comentarios para mi corazón</title>
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <link rel="icon" type="image/png" href="assets/lily-icon.png">
 </head>
 
@@ -47,33 +46,17 @@
   <section>
     <h2>Aquí puedes comentar, corazón</h2>
 
-    <!-- Gitalk -->
-    <div id="gitalk-container"></div>
+    <p><a href="https://github.com/Leo123nardo/Lily_pera/issues/1">Ver y escribir comentarios en GitHub</a></p>
   </section>
 
 </main>
 
 <!-- ===================== SCRIPTS ===================== -->
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
 <script>
 function toggleMenu() {
   document.getElementById("mobile-menu").classList.toggle("show");
 }
 
-var gitalk = new Gitalk({
-  clientID: 'Ov23liawiqxw8NGUPbhq',
-  clientSecret: 'a948e011f97fb07d018c2c35d431aabd2a4f3b80',
-  repo: 'Lily_pera',
-  owner: 'Leo123nardo',
-  admin: ['Leo123nardo'],
-  id: location.pathname,
-  distractionFreeMode: false,
-  language: 'es',
-  title: 'Comentarios'
-});
-
-gitalk.render('gitalk-container');
 </script>
 
 </body>
