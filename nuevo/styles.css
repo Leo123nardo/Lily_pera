@@ -1750,3 +1750,38 @@ body.collage-page /* ===================== ESTILOS GENERALES ===================
   .romantic-home .memory-links { grid-template-columns: 1fr; max-width: 380px; gap: 1rem; }
   .romantic-home .memory-link { min-height: 170px; padding: 1.5rem; }
 }
+
+/* Nuestra historia: misma identidad de portada, lectura editorial */
+.romantic-home.story-page .story-main {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+.story-page .story-article { max-width: 800px; margin: 0 auto; }
+.story-page .story-heading { text-align: center; margin-bottom: 3rem; }
+.story-page .story-ornament { display: block; color: var(--romantic-rose); font: 2rem Georgia, serif; margin-bottom: 1.2rem; }
+.story-page .story-heading h1 {
+  margin: 0; color: #563b47;
+  font: 400 clamp(3.5rem, 7.5vw, 6.8rem)/.98 Georgia, serif;
+  letter-spacing: -.065em; text-shadow: none; text-align: center;
+}
+.story-page .story-prose {
+  max-width: 680px; margin: 0 auto;
+  border-top: 1px solid rgba(195,126,148,.25);
+  border-bottom: 1px solid rgba(195,126,148,.25);
+  padding: 2.5rem 0 1rem;
+}
+.story-page .story-prose p {
+  margin: 0 0 1.6rem; padding: 0;
+  color: var(--romantic-muted);
+  font: 400 1.08rem/1.9 Georgia, serif;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+@media (max-width: 640px) {
+  .story-page .story-heading h1 { font-size: clamp(3.5rem, 16vw, 5.2rem); }
+  .story-page .story-heading { margin-bottom: 2rem; }
+  .story-page .story-prose { padding-top: 1.8rem; }
+  .story-page .story-prose p { font-size: 1rem; }
+}
