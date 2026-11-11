@@ -1660,3 +1660,93 @@ body.collage-page /* ===================== ESTILOS GENERALES ===================
   .romantic-home .hero-photo-wrap { width: min(88%, 340px); }
   .romantic-home .hero-photo { min-height: 330px; }
 }
+
+/* Portada: reloj en vivo y accesos centrados */
+.romantic-home .counter-card {
+  width: min(100%, 760px);
+  padding: 1.5rem 0;
+}
+.romantic-home .time-counter {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(.5rem, 2vw, 1.2rem);
+  width: 100%;
+  margin: 1.2rem 0 .5rem;
+}
+.romantic-home .time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 1.4rem .75rem 1rem;
+  gap: 0;
+  border: 1px solid rgba(199,125,149,.24);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255,255,255,.8), rgba(245,219,229,.65));
+  box-shadow: 0 8px 24px rgba(121,72,90,.05);
+}
+.romantic-home .time-value {
+  display: block;
+  padding-bottom: 1rem;
+  color: #b75e7d;
+  font: 400 clamp(2rem, 5.8vw, 4.4rem)/1.1 Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.055em;
+  text-align: center;
+}
+.romantic-home .time-unit > span {
+  display: block;
+  border-top: 1px solid rgba(183,94,125,.25);
+  padding-top: .85rem;
+  color: #785965;
+  font: .75rem/1.4 "Segoe UI", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.romantic-home .memory-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.romantic-home .memory-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 760px);
+  max-width: 760px;
+  margin: 2.5rem auto 0;
+  gap: 1.5rem;
+  border: 0;
+  text-align: center;
+}
+.romantic-home .memory-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 210px;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(199,125,149,.26);
+  border-radius: 20px;
+  background: rgba(255,255,255,.45);
+  box-shadow: 0 8px 24px rgba(121,72,90,.04);
+  text-align: center;
+}
+.romantic-home .memory-link:last-child { border-right: 1px solid rgba(199,125,149,.26); }
+.romantic-home .memory-icon { margin-bottom: 1rem; font-size: 2rem; }
+.romantic-home .memory-link-copy { max-width: 260px; }
+.romantic-home .memory-link:focus-visible {
+  outline: 2px solid #b75e7d;
+  outline-offset: 5px;
+}
+.romantic-home .memory-link:hover {
+  background: rgba(255,255,255,.8);
+  box-shadow: 0 12px 28px rgba(121,72,90,.09);
+}
+@media (max-width: 540px) {
+  .romantic-home .time-unit { padding: 1rem .3rem .75rem; border-radius: 12px; }
+  .romantic-home .time-value { font-size: clamp(1.6rem, 7vw, 2.5rem); padding-bottom: .7rem; }
+  .romantic-home .time-unit > span { font-size: .58rem; letter-spacing: .035em; padding-top: .65rem; }
+  .romantic-home .memory-links { grid-template-columns: 1fr; max-width: 380px; gap: 1rem; }
+  .romantic-home .memory-link { min-height: 170px; padding: 1.5rem; }
+}
