@@ -4,38 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cumpleaños Feliz</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261113-header-2">
   <link rel="icon" type="image/png" href="assets/lily-icon.png">
 </head>
 
 <body>
 
 <!-- ===================== HEADER ===================== -->
-<header class="header">
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <h1 class="logo">💖 Lily Leija 💖</h1>
-
-  <nav class="nav-desktop">
-    <a href="nuevo.html">¿Qué está pasando?</a>
-    <a href="Desde que te conocí.html">Desde que te conocí</a>
-    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
-    <a href="Leo.html">Leo y Lily</a>
+<header class="header site-header">
+  <a class="site-brand" href="nuevo.html" aria-label="Lily y Leo, inicio">Lily <em>&amp;</em> Leo <span aria-hidden="true">♥</span></a>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+  <nav class="nav-desktop" aria-label="Navegación principal">
+    <a href="nuevo.html">Inicio</a>
+    <a href="Desde que te conocí.html">Nuestra historia</a>
+    <a href="Qué significas para mi.html">Lo que significas</a>
+    <a href="Leo.html">Lily y Leo</a>
     <a href="comentarios.html">Comentarios</a>
-    <a href="CartaLily.html">Carta para Lily</a>
-    <a href="Cumpleaños.html" class="active">Cumpleaños</a>
-    <a href="Collage L y L.html">Collage L y L</a>
+    <a href="CartaLily.html">Carta</a>
+    <a href="Cumpleaños.html" class="active" aria-current="page">Cumpleaños</a>
+    <a href="Collage L y L.html">Nuestro álbum</a>
   </nav>
-
-  <nav id="mobile-menu" class="nav-mobile">
-    <a href="nuevo.html">¿Qué está pasando?</a>
-    <a href="Desde que te conocí.html">Desde que te conocí</a>
-    <a href="Qué significas para mi.html">¿Qué significas para mí?</a>
-    <a href="Leo.html">Leo y Lily</a>
+  <nav id="mobile-menu" class="nav-mobile" aria-label="Navegación móvil">
+    <a href="nuevo.html">Inicio</a>
+    <a href="Desde que te conocí.html">Nuestra historia</a>
+    <a href="Qué significas para mi.html">Lo que significas</a>
+    <a href="Leo.html">Lily y Leo</a>
     <a href="comentarios.html">Comentarios</a>
-    <a href="CartaLily.html">Carta para Lily</a>
-    <a href="Cumpleaños.html">Cumpleaños</a>
-    <a href="Collage L y L.html">Collage L y L</a>
+    <a href="CartaLily.html">Carta</a>
+    <a href="Cumpleaños.html" class="active" aria-current="page">Cumpleaños</a>
+    <a href="Collage L y L.html">Nuestro álbum</a>
   </nav>
 </header>
 
@@ -72,5 +69,6 @@ function toggleMenu() {
 }
 </script>
 
+<script src="header.js?v=20261113-header-2" defer></script>
 </body>
 </html>
