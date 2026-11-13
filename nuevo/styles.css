@@ -1787,3 +1787,27 @@ body.collage-page /* ===================== ESTILOS GENERALES ===================
   .story-page .story-prose { padding-top: 1.8rem; }
   .story-page .story-prose p { font-size: 1rem; }
 }
+
+/* ¿Qué significas para mi?: conservar versos y compartir lectura editorial */
+.meaning-page .fragmento-cancion {
+  max-width: 760px;
+  margin: 3rem auto 1.5rem;
+  padding: 2rem clamp(1rem, 4vw, 2.5rem);
+  background: rgba(255,255,255,.45);
+  border: 1px solid rgba(195,126,148,.25);
+  border-radius: 18px;
+  box-shadow: none;
+}
+.meaning-page .story-prose .fragmento-cancion p {
+  margin: 0;
+  color: #785965;
+  font-style: italic;
+  text-align: center;
+  text-align-last: center;
+  hyphens: none;
+}
+.romantic-home .romantic-logo { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 1400px) {
+  .romantic-home .nav-desktop { display: none; }
+  .romantic-home .menu-toggle { display: block; }
+}
