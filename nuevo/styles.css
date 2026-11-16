@@ -1991,3 +1991,16 @@ body .header.site-header button:focus-visible { outline: 2px solid #ad5b7a; outl
   .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) { display: block; columns: 1; }
   .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) > figure { margin-bottom: 1rem; }
 }
+
+/* Carta: orientación horizontal sin modificar el archivo original. */
+body.carta-page .centered-image .letter-photo-horizontal {
+  position: relative; width: 100%; aspect-ratio: 1280 / 720;
+  overflow: hidden; border-radius: 10px;
+}
+body.carta-page .centered-image .letter-photo-horizontal img,
+body.carta-page .centered-image .letter-photo-horizontal img:hover {
+  position: absolute; left: 50%; top: 50%; width: 56.25%;
+  height: auto; max-width: none; max-height: none; margin: 0;
+  border-radius: 0; box-shadow: none;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
