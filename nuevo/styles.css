@@ -2066,3 +2066,89 @@ body.romantic-letter .centered-image figcaption { color: #8d737d; font: italic .
   body.romantic-letter p { font-size: 1rem; }
   body.romantic-letter .valentine-section { margin-top: 3rem; padding-top: 2rem; }
 }
+
+/* Nuestro álbum · fotografías originales en un álbum artesanal. */
+.scrapbook-page .intro {
+  position: relative; max-width: 980px; margin: 0 auto;
+  padding: clamp(3rem,7vw,5rem) clamp(1.2rem,5vw,3rem) 2rem;
+  background: transparent; box-shadow: none; border-radius: 0;
+  animation: scrapbook-intro .85s ease-out both;
+}
+.scrapbook-page .intro h2 {
+  font: 400 clamp(2rem,4.5vw,3.5rem)/1.2 Georgia,serif; color: #563b47;
+  text-shadow: none; margin: 0 0 2rem; letter-spacing: -.035em;
+}
+.scrapbook-page .intro p {
+  font: 400 1.08rem/1.9 Georgia,serif; color: #8d737d;
+  margin: 0; text-align: justify; hyphens: auto; overflow-wrap: break-word;
+}
+.scrapbook-page .scrapbook-section {
+  max-width: 1180px; margin: 0 auto; padding: 1rem clamp(1.2rem,5vw,3.5rem) 5rem;
+  background: transparent; border-radius: 0; box-shadow: none;
+}
+.scrapbook-page #scrapbook-title {
+  font: 400 clamp(3rem,7vw,5.5rem)/1.1 Georgia,serif;
+  text-align: center; letter-spacing: -.05em; color: #563b47;
+  margin: 1rem 0 3rem; animation: scrapbook-intro 1s ease-out both;
+}
+.scrapbook-page .scrapbook-grid {
+  display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 2.5rem 2rem; align-items: start; padding: 1rem .4rem;
+  background-image: radial-gradient(rgba(189,143,158,.18) .7px,transparent .7px);
+  background-size: 9px 9px;
+}
+.scrapbook-page .scrapbook-card {
+  --photo-tilt: -2deg; position: relative; min-width: 0; margin: 0;
+  padding: .7rem .7rem .25rem; background: #fffdf8; border-radius: 2px;
+  border: 1px solid rgba(195,163,150,.15);
+  box-shadow: 0 8px 22px rgba(110,69,83,.13);
+  transform: rotate(var(--photo-tilt));
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.scrapbook-page .scrapbook-card:nth-child(even) { --photo-tilt: 2deg; margin-top: 1.5rem; }
+.scrapbook-page .scrapbook-card:nth-child(3n) { --photo-tilt: -1deg; }
+.scrapbook-page .scrapbook-card::before {
+  content: ""; position: absolute; left: 32%; top: -.65rem; z-index: 2;
+  width: 36%; height: 1.65rem; background: rgba(213,169,184,.65);
+  transform: rotate(-5deg); pointer-events: none;
+}
+.scrapbook-page .scrapbook-photo { display: block; border-radius: 1px; }
+.scrapbook-page .scrapbook-card img {
+  display: block; width: 100%; height: 270px; object-fit: contain;
+  margin: 0; border: 0; border-radius: 0; box-shadow: none; transform: none;
+}
+.scrapbook-page .scrapbook-card figcaption {
+  color: #785563; font: italic 1rem/1.6 Georgia,serif;
+  text-align: center; margin: 0; padding: 1rem .3rem .7rem; overflow-wrap: break-word;
+}
+.scrapbook-page .scrapbook-photo:focus-visible { outline: 2px solid #a84e70; outline-offset: 4px; }
+@media(hover:hover) {
+  .scrapbook-page .scrapbook-card:hover {
+    transform: translateY(-7px) rotate(0deg); z-index: 3;
+    box-shadow: 0 16px 30px rgba(110,69,83,.2);
+  }
+}
+.scrapbook-page .scrapbook-revealed { animation: scrapbook-arrive .75s ease-out both; }
+.scrapbook-page .scrapbook-revealed:nth-child(3n+2) { animation-delay: .08s; }
+.scrapbook-page .scrapbook-revealed:nth-child(3n) { animation-delay: .16s; }
+@keyframes scrapbook-intro { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scrapbook-arrive {
+  from { opacity: 0; translate: 0 28px; scale: .96; }
+  to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@media(max-width:800px) {
+  .scrapbook-page .scrapbook-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem 1.2rem; }
+  .scrapbook-page .scrapbook-card img { height: 240px; }
+}
+@media(max-width:480px) {
+  .scrapbook-page .intro p { font-size: 1rem; }
+  .scrapbook-page .scrapbook-grid { gap: 1.6rem .9rem; }
+  .scrapbook-page .scrapbook-card { padding: .4rem .4rem .1rem; }
+  .scrapbook-page .scrapbook-card img { height: 165px; }
+  .scrapbook-page .scrapbook-card figcaption { font-size: .88rem; padding: .8rem .1rem .6rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .scrapbook-page .intro, .scrapbook-page #scrapbook-title,
+  .scrapbook-page .scrapbook-card { animation: none; transition: none; }
+  .scrapbook-page .scrapbook-card:hover { transform: rotate(var(--photo-tilt)); }
+}
