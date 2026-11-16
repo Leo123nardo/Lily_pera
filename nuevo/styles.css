@@ -1979,3 +1979,15 @@ body .header.site-header button:focus-visible { outline: 2px solid #ad5b7a; outl
   .chapters-page .collage-container-vertical,
   .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) { columns: 1; }
 }
+
+/* La primera fecha combina una toma vertical y dos horizontales. */
+.chapters-page .collage-container-vertical:has(> figure:nth-child(3)) {
+  display: grid; grid-template-columns: .7fr 1fr; grid-template-rows: min-content 1fr;
+  gap: 1rem; align-items: start;
+}
+.chapters-page .collage-container-vertical:has(> figure:nth-child(3)) > figure { margin: 0; }
+.chapters-page .collage-container-vertical:has(> figure:nth-child(3)) > figure:first-child { grid-row: 1 / span 2; }
+@media (max-width: 640px) {
+  .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) { display: block; columns: 1; }
+  .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) > figure { margin-bottom: 1rem; }
+}
