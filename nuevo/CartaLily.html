@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartita para Lily</title>
-    <link rel="stylesheet" href="styles.css?v=20261116-carta-photo">
+    <link rel="stylesheet" href="styles.css?v=20261116-romantic-envelope">
     <link rel="icon" type="image/png" href="assets/lily-icon.png">
 </head>
-<body class="carta-page">
+<body class="carta-page romantic-home romantic-letter">
     <header class="header site-header">
   <a class="site-brand" href="nuevo.html" aria-label="Lily y Leo, inicio">Lily <em>&amp;</em> Leo <span aria-hidden="true">♥</span></a>
   <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
@@ -31,10 +31,11 @@
   </nav>
 </header>
     
-    <main>
+    <main class="letter-main">
         <!-- Sección de la carta principal -->
         <section class="intro-section">
-            <h2>❤️ Una carta muy especial para ti ❤️</h2>
+            <h1>❤️ Una carta muy especial para ti ❤️</h1>
+<div class="envelope-layout"><div class="romantic-envelope" aria-hidden="true"><span class="envelope-seal">♥</span></div>
             <div class="card-content">
                 <p>Holap Lily hermosa, esta es una carta muy pequeña, espero y te guste. Descárgalo y ábrelo cuando quieras. Disfrutalo ❤️</p>
                 
@@ -48,6 +49,7 @@
                     <a href="https://www.canva.com/design/DAGfC0rDvSs/C9Ge1U0GQg8JGspx8E8qHw/edit?utm_content=DAGfC0rDvSs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="surprise-link">¡Descubre la sorpresa! 🎁</a>
                 </p>
             </div>
+</div>
         </section>
 
         <!-- Sección del 14 de Febrero -->
@@ -74,26 +76,7 @@
         </section>
     </main>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("show");
-        }
 
-        // Efecto para el botón de descarga
-        document.addEventListener('DOMContentLoaded', function() {
-            const downloadBtn = document.querySelector('.descargar-boton');
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function() {
-                    this.innerHTML = '📥 Descargando... 💕';
-                    setTimeout(() => {
-                        this.innerHTML = '📥 ¡Descargado! 💕';
-                        this.style.background = '#4CAF50';
-                    }, 1500);
-                });
-            }
-        });
-    </script>
 
     
 <script src="header.js?v=20261113-header-2" defer></script>

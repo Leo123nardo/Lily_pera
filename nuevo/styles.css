@@ -2004,3 +2004,65 @@ body.carta-page .centered-image .letter-photo-horizontal img:hover {
   border-radius: 0; box-shadow: none;
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
+/* Carta · sobre romántico, misma identidad que portada. */
+body.romantic-letter .letter-main {
+  position: relative; max-width: 1100px; margin: 0 auto;
+  padding: clamp(3rem,7vw,6rem) clamp(1.1rem,5vw,4rem);
+}
+body.romantic-letter .intro-section,
+body.romantic-letter .valentine-section {
+  background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 0; margin: 0;
+}
+body.romantic-letter h1 {
+  color: #563b47; font: 400 clamp(2.6rem,5.5vw,4.8rem)/1.12 Georgia,serif;
+  letter-spacing: -.045em; text-align: center; margin: 0 auto 3rem; max-width: 900px;
+}
+body.romantic-letter .envelope-layout { display: grid; grid-template-columns: .75fr 1fr; align-items: center; gap: clamp(2rem,5vw,4rem); }
+body.romantic-letter .romantic-envelope {
+  position: relative; width: 100%; aspect-ratio: 1.5; overflow: hidden;
+  background: #eec5d4; border: 1px solid #dca4b9; border-radius: 7px;
+  box-shadow: 0 18px 36px rgba(137,81,107,.14);
+}
+body.romantic-letter .romantic-envelope::before {
+  content: ""; position: absolute; inset: 0; background: #f8dfe8;
+  clip-path: polygon(0 0,100% 0,50% 62%);
+}
+body.romantic-letter .envelope-seal {
+  position: absolute; left: 50%; top: 56%; transform: translate(-50%,-50%);
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  color: #fff6f8; background: #b46782; font: 28px Georgia,serif;
+  box-shadow: 0 3px 8px rgba(128,85,104,.18);
+}
+body.romantic-letter .card-content { max-width: none; margin: 0; }
+body.romantic-letter p { color: var(--romantic-muted); font: 400 1.08rem/1.9 Georgia,serif; margin: 0 0 1.6rem; }
+body.romantic-letter .card-content p { text-align: center; }
+body.romantic-letter .action-buttons { margin: 1.5rem 0; }
+body.romantic-letter .descargar-boton {
+  margin: 0; padding: 1rem 1.5rem; border-radius: 999px;
+  background: linear-gradient(120deg,#cf8098,#ad5b7a); color: white;
+  font: 600 .95rem/1.5 "Segoe UI",sans-serif;
+  box-shadow: 0 12px 28px rgba(173,91,122,.18);
+}
+body.romantic-letter .descargar-boton:hover { background: #a84e70; transform: translateY(-2px); }
+body.romantic-letter .extra-surprise { margin-top: 1.5rem; font-size: 1rem; }
+body.romantic-letter .surprise-link { display: inline; color: #a84e70; background: transparent; padding: 0; border-radius: 0; font-weight: 400; text-decoration: underline; text-underline-offset: 4px; }
+body.romantic-letter .surprise-link:hover { background: transparent; color: #86405a; }
+body.romantic-letter main a:focus-visible { outline: 2px solid #a84e70; outline-offset: 5px; }
+body.romantic-letter .valentine-section { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #e6c7d3; }
+body.romantic-letter .valentine-section h2 {
+  color: #a84e70; font: 400 clamp(2rem,4vw,3rem)/1.25 Georgia,serif;
+  text-shadow: none; text-align: left; margin: 0 0 2rem; letter-spacing: -.035em;
+}
+body.romantic-letter .memory-content { max-width: 900px; margin: 0 auto; }
+body.romantic-letter .memory-content p { text-align: justify; hyphens: auto; overflow-wrap: break-word; }
+body.romantic-letter .centered-image { display: block; max-width: 720px; width: 100%; margin: 2.5rem auto 0; }
+body.romantic-letter .centered-image figure { padding: .65rem; background: #fffaf9; border: 1px solid #edd5df; box-shadow: 0 10px 28px rgba(109,61,80,.06); }
+body.romantic-letter .centered-image figure:hover { transform: none; }
+body.romantic-letter .centered-image figcaption { color: #8d737d; font: italic .95rem/1.65 Georgia,serif; padding: .4rem .5rem; }
+@media(max-width:640px) {
+  body.romantic-letter .envelope-layout { grid-template-columns: 1fr; gap: 2rem; }
+  body.romantic-letter .romantic-envelope { max-width: 300px; margin: auto; }
+  body.romantic-letter p { font-size: 1rem; }
+  body.romantic-letter .valentine-section { margin-top: 3rem; padding-top: 2rem; }
+}
