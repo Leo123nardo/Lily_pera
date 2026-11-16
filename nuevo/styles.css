@@ -1932,3 +1932,50 @@ body .header.site-header button:focus-visible { outline: 2px solid #ad5b7a; outl
   .chapters-page .memory-videos { grid-template-columns: 1fr; gap: 1.25rem; }
   .chapters-page .memory-entry { margin-bottom: 3rem; padding-bottom: 3rem; }
 }
+
+/* Collages fluidos: las tarjetas conservan la proporción de cada fotografía. */
+.chapters-page .collage-container,
+.chapters-page .collage-container-vertical,
+.chapters-page .collage-container-vertical:has(> figure:nth-child(3)) {
+  display: block; columns: 2; column-gap: 1rem; margin: 2rem 0 0;
+}
+.chapters-page .collage-container { columns: 3; }
+.chapters-page .collage-container > figure,
+.chapters-page .collage-container-vertical > figure {
+  display: inline-block; vertical-align: top; width: 100%;
+  break-inside: avoid; margin: 0 0 1rem; padding: .6rem;
+  border: 1px solid rgba(195,126,148,.2); border-radius: 12px;
+  background: rgba(255,250,249,.8); box-shadow: 0 8px 24px rgba(116,65,82,.06);
+}
+.chapters-page .collage-container-vertical:has(> figure:only-child) {
+  columns: 1; max-width: 720px; margin: 2rem auto 0;
+}
+.chapters-page .collage-container-vertical:has(img[src="assets/DiaXV.jpeg"]) { max-width: 440px; }
+.chapters-page .collage-container-vertical > figure:only-child { width: 100%; }
+.chapters-page .collage-container img,
+.chapters-page .collage-container-vertical img {
+  display: block; width: 100%; max-width: none; height: auto; max-height: none;
+  margin: 0; border: 0; border-radius: 6px; box-shadow: none; object-fit: contain;
+}
+.chapters-page .collage-container-vertical figcaption {
+  margin: .85rem 0 .4rem; padding: 0 .5rem;
+}
+.chapters-page .oriented-photo {
+  position: relative; width: 100%; aspect-ratio: 1280 / 720;
+  overflow: hidden; border-radius: 6px;
+}
+.chapters-page .oriented-photo.wide-photo { aspect-ratio: 1600 / 844; }
+.chapters-page .oriented-photo img {
+  position: absolute; left: 50%; top: 50%; width: 56.25%; height: auto;
+  max-width: none; max-height: none; border-radius: 0;
+}
+.chapters-page .oriented-photo.wide-photo img { width: 52.75%; }
+.chapters-page .turn-right img,
+.chapters-page .turn-right img:hover { transform: translate(-50%,-50%) rotate(90deg); }
+.chapters-page .turn-left img,
+.chapters-page .turn-left img:hover { transform: translate(-50%,-50%) rotate(-90deg); }
+@media (max-width: 640px) {
+  .chapters-page .collage-container { columns: 2; column-gap: .65rem; }
+  .chapters-page .collage-container-vertical,
+  .chapters-page .collage-container-vertical:has(> figure:nth-child(3)) { columns: 1; }
+}
