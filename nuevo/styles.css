@@ -2205,3 +2205,13 @@ body.romantic-letter .centered-image figcaption { color: #8d737d; font: italic .
  .birthday-page .birthday-icon { width: 72px; }
  .birthday-page .birthday-photo figure { padding: .8rem .55rem .5rem; }
 }
+
+/* Iconos decorativos de Carta y Nuestro Album. */
+.romantic-home .romantic-line-icon {
+  fill: none; stroke: currentColor; stroke-width: 1.5;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.romantic-home .title-line-icon { display: block; width: 48px; height: 48px; margin: 0 auto 1.5rem; color: #c77d95; }
+.romantic-home .action-line-icon { display: inline-block; width: 1.2em; height: 1.2em; vertical-align: -.2em; flex-shrink: 0; }
+body.romantic-letter .descargar-boton { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; }
+body.romantic-letter .surprise-link .action-line-icon { margin-left: .25rem; }
