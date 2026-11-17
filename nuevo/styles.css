@@ -1830,7 +1830,7 @@ body .header.site-header .site-brand {
 body .header.site-header .site-brand em { color: #c77d95; }
 body .header.site-header .site-brand span { color: #c77d95; font-size: .9rem; }
 body .header.site-header .nav-desktop {
-  display: flex; align-items: center; justify-content: flex-end; flex-wrap: nowrap;
+  display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap;
   gap: .25rem; margin: 0; padding: 0; background: transparent;
 }
 body .header.site-header nav a {
