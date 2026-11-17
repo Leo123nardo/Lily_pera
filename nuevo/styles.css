@@ -2152,3 +2152,23 @@ body.romantic-letter .centered-image figcaption { color: #8d737d; font: italic .
   .scrapbook-page .scrapbook-card { animation: none; transition: none; }
   .scrapbook-page .scrapbook-card:hover { transform: rotate(var(--photo-tilt)); }
 }
+
+/* Álbum paginado: únicamente hover en las fotografías. */
+.scrapbook-page .intro, .scrapbook-page #scrapbook-title,
+.scrapbook-page .scrapbook-card { animation: none; }
+.scrapbook-page .scrapbook-card { padding-bottom: 1.5rem; }
+.scrapbook-page .scrapbook-card img { cursor: default; }
+.scrapbook-page .scrapbook-card[hidden],
+.scrapbook-page .scrapbook-pagination[hidden] { display: none; }
+.scrapbook-page .scrapbook-pagination {
+ display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+ gap: 1rem; margin: 0 0 2.5rem; color: #785563;
+ font: .95rem/1.5 "Segoe UI",sans-serif;
+}
+.scrapbook-page .scrapbook-pagination button {
+ padding: .7rem 1.2rem; border: 1px solid #dcb9c8; border-radius: 999px;
+ background: #fff9f7; color: #8e4e68; font: inherit; cursor: pointer;
+}
+.scrapbook-page .scrapbook-pagination button:hover:not(:disabled) { background: #f8e5e9; }
+.scrapbook-page .scrapbook-pagination button:disabled { opacity: .45; cursor: default; }
+.scrapbook-page .scrapbook-pagination button:focus-visible { outline: 2px solid #a84e70; outline-offset: 3px; }
