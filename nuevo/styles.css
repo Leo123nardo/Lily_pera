@@ -2239,3 +2239,20 @@ body.romantic-letter .surprise-link .action-line-icon { margin-left: .25rem; }
 .graduation-page .graduation-mosaic figure { margin-bottom:.7rem; }
 }
 @media(max-width:400px) { .graduation-page .graduation-mosaic { columns:1; } }
+
+/* Filas justificadas: fotos completas y cierre alineado sin columnas sobrantes. */
+.graduation-page .graduation-mosaic { display:grid; columns:auto; gap:1rem; }
+.graduation-page .graduation-row { display:grid; gap:1rem; align-items:start; min-width:0; }
+.graduation-page .graduation-mosaic figure { display:block; min-width:0; margin:0; width:100%; }
+.graduation-page .graduation-mosaic img { width:100%; height:auto; max-height:none; }
+.graduation-page .graduation-row-1 { grid-template-columns: 0.75000000fr 0.75000000fr 0.75000000fr; }
+.graduation-page .graduation-row-2 { grid-template-columns: 0.75000000fr 0.87375000fr 0.75000000fr; }
+.graduation-page .graduation-row-3 { grid-template-columns: 0.75000000fr 0.75000000fr 1.33333333fr; }
+.graduation-page .graduation-row-4 { grid-template-columns: 0.75000000fr 0.75000000fr 1.11731844fr; }
+.graduation-page .graduation-row-5 { grid-template-columns: 0.59250000fr 0.75000000fr 0.58500000fr; }
+.graduation-page .graduation-row-6 { grid-template-columns: 0.75000000fr 0.75000000fr 0.75000000fr; }
+
+@media(max-width:640px) {
+  .graduation-page .graduation-mosaic { gap:.75rem; }
+  .graduation-page .graduation-row { grid-template-columns:1fr; gap:.75rem; }
+}
