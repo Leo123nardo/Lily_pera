@@ -2297,3 +2297,27 @@ body.romantic-letter .surprise-link .action-line-icon { margin-left: .25rem; }
   .graduation-page .graduation-gallery.will-reveal,
   .graduation-page .graduation-gallery.will-reveal .graduation-row { opacity:1; transform:none; transition:none; }
 }
+/* Mi Graduación · los primeros recuerdos acompañan al retrato; el cierre usa todo el ancho. */
+.graduation-page .graduation-introduction { max-width:none; margin:0; }
+.graduation-page .graduation-opening-layout {
+  display:grid; grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
+  align-items:stretch; gap:clamp(2rem,6vw,5rem);
+}
+.graduation-page .graduation-opening-copy { min-width:0; }
+.graduation-page .graduation-opening-layout .graduation-portrait {
+  align-self:stretch; width:100%; height:100%; min-height:0; margin:0;
+}
+.graduation-page .graduation-opening-layout .graduation-portrait img {
+  width:100%; height:100%; min-height:100%; object-fit:cover; object-position:center;
+}
+.graduation-page .graduation-final-copy {
+  max-width:none; margin-top:clamp(3rem,7vw,5rem); padding-top:clamp(2rem,4vw,3rem);
+  border-top:1px solid #e6ccd4;
+}
+.graduation-page .graduation-final-copy p { margin:0; }
+@media(max-width:700px) {
+  .graduation-page .graduation-opening-layout { grid-template-columns:1fr; gap:2rem; }
+  .graduation-page .graduation-opening-layout .graduation-portrait { height:auto; max-width:480px; justify-self:center; }
+  .graduation-page .graduation-opening-layout .graduation-portrait img { height:auto; min-height:0; object-fit:contain; }
+  .graduation-page .graduation-final-copy { margin-top:3rem; }
+}
