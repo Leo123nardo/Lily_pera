@@ -2321,3 +2321,160 @@ body.romantic-letter .surprise-link .action-line-icon { margin-left: .25rem; }
   .graduation-page .graduation-opening-layout .graduation-portrait img { height:auto; min-height:0; object-fit:contain; }
   .graduation-page .graduation-final-copy { margin-top:3rem; }
 }
+
+/* Vista adaptable global: conserva el diseño completo en pantallas pequeñas. */
+html { -webkit-text-size-adjust: 100%; }
+body.romantic-home { overflow-x: hidden; }
+body.romantic-home img,
+body.romantic-home video,
+body.romantic-home iframe { max-width: 100%; }
+
+/* La composición editorial de graduación sigue cabiendo con comodidad en tabletas. */
+@media (min-width:701px) and (max-width:900px) {
+  .graduation-page .graduation-opening-layout {
+    grid-template-columns: minmax(0,1.08fr) minmax(280px,.92fr);
+    gap: 2rem;
+  }
+  .graduation-page .graduation-main { padding-inline: clamp(1.25rem,4vw,2.5rem); }
+}
+
+/* Teléfonos y pantallas compactas. */
+@media (max-width:700px) {
+  body .header.site-header {
+    min-height: 64px;
+    gap: .65rem;
+    padding: .6rem 1rem;
+  }
+  body .header.site-header .site-brand {
+    max-width: calc(100% - 56px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(1.22rem,6.2vw,1.45rem);
+    line-height: 1.25;
+  }
+  body .header.site-header .site-brand span { font-size: .75rem; }
+  body .header.site-header .menu-toggle {
+    display: grid;
+    flex: 0 0 44px;
+    width: 44px;
+    min-height: 44px;
+    place-items: center;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  body .header.site-header .nav-mobile {
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    padding: .65rem .8rem .85rem;
+  }
+  body .header.site-header .nav-mobile a {
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: .65rem .8rem;
+    font-size: .98rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  .romantic-main,
+  .story-page .story-main,
+  .chapters-page .chapters-main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .story-page .story-main { padding-top: 2.75rem; padding-bottom: 3.5rem; }
+  .story-page .story-heading h1 { letter-spacing: -.05em; }
+  .story-page .story-prose { width: 100%; box-sizing: border-box; }
+  .story-page .story-prose p,
+  .scrapbook-page .intro p,
+  .birthday-page .birthday-prose p,
+  body.romantic-letter p {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .chapters-page .chapter-index { gap: .45rem; margin-bottom: 2.4rem; }
+  .chapters-page .chapter-index a {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .52rem .9rem;
+  }
+  .chapters-page .chapter-section { min-width: 0; }
+  .chapters-page .collage-container,
+  .chapters-page .collage-container-vertical { max-width: 100%; }
+
+  .time-counter { gap: .35rem; }
+  .time-value { font-size: clamp(1.7rem,10vw,2.6rem); }
+  .time-unit span { font-size: .72rem; }
+  .memory-links { grid-template-columns: 1fr; margin-top: 1.8rem; }
+  .memory-link { min-height: 0; padding: 1.35rem; }
+  .romantic-cta { max-width: 100%; box-sizing: border-box; justify-content: center; text-align: center; }
+
+  body.romantic-letter .letter-main,
+  .birthday-page .birthday-main,
+  .scrapbook-page .scrapbook-section,
+  .graduation-page .graduation-main {
+    padding-inline: 1rem;
+  }
+  body.romantic-letter .descargar-boton {
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+  }
+  body.romantic-letter .action-buttons { display: flex; justify-content: center; }
+  .birthday-page .birthday-main { padding-bottom: 3.5rem; }
+  .birthday-page h1 { font-size: clamp(2.35rem,12vw,3.35rem); }
+  .birthday-page .birthday-photo { width: 100%; }
+
+  .scrapbook-page .intro { padding-inline: 1rem; }
+  .scrapbook-page .scrapbook-section { padding-bottom: 3.5rem; }
+  .scrapbook-page .scrapbook-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .scrapbook-page .scrapbook-card img { height: clamp(135px,39vw,220px); }
+
+  .graduation-page .graduation-opening-layout,
+  .graduation-page .graduation-final-layout { width: 100%; min-width: 0; }
+  .graduation-page .graduation-opening-copy,
+  .graduation-page .graduation-final-copy,
+  .graduation-page .graduation-message { min-width: 0; }
+  .graduation-page .graduation-portrait { overflow: hidden; }
+  .graduation-page .graduation-portrait img { display: block; max-width: 100%; }
+  .graduation-page .graduation-gallery { display: block; width: 100%; padding-top: 2rem; }
+  .graduation-page .graduation-mosaic { display: grid; width: 100%; gap: .7rem; }
+  .graduation-page .graduation-row { display: grid; grid-template-columns: 1fr; gap: .7rem; width: 100%; }
+  .graduation-page .graduation-mosaic figure { width: 100%; }
+  .graduation-page .graduation-mosaic img { display: block; width: 100%; height: auto; }
+
+  /* Respaldo para navegadores móviles donde IntersectionObserver no inicia. */
+  .graduation-page .graduation-gallery.will-reveal,
+  .graduation-page .graduation-gallery.will-reveal .graduation-row {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width:420px) {
+  .romantic-home .romantic-main { padding-inline: .85rem; }
+  .romantic-hero { gap: 2.25rem; padding-top: 3rem; }
+  .counter-card { padding-inline: .8rem; }
+  .time-counter { gap: .18rem; }
+  .time-value { font-size: clamp(1.45rem,9.2vw,2.25rem); }
+  .time-unit span { font-size: .64rem; }
+  .scrapbook-page .scrapbook-grid { gap: 1rem .65rem; }
+  .scrapbook-page .scrapbook-card { padding: .35rem .35rem .1rem; }
+  .scrapbook-page .scrapbook-card img { height: 128px; }
+  .graduation-page .graduation-main { padding-inline: .85rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-hearts span,
+  .reveal,
+  .graduation-page .graduation-gallery,
+  .graduation-page .graduation-gallery .graduation-row {
+    animation: none !important;
+    transition: none !important;
+  }
+}
