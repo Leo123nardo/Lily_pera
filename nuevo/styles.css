@@ -2256,3 +2256,44 @@ body.romantic-letter .surprise-link .action-line-icon { margin-left: .25rem; }
   .graduation-page .graduation-mosaic { gap:.75rem; }
   .graduation-page .graduation-row { grid-template-columns:1fr; gap:.75rem; }
 }
+
+/* Mi Graduación · mensaje final alineado, corazones y entrada de galería. */
+.graduation-page .graduation-main { z-index:1; }
+.graduation-page .graduation-editorial { display:block; }
+.graduation-page .graduation-introduction { max-width:900px; margin:0 auto clamp(3rem,7vw,5.5rem); }
+.graduation-page .graduation-final-layout {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(310px,.78fr);
+  align-items:stretch; gap:clamp(2rem,6vw,5rem);
+}
+.graduation-page .graduation-final-copy { min-width:0; }
+.graduation-page .graduation-final-copy p { margin:0; }
+.graduation-page .graduation-final-layout .graduation-portrait {
+  align-self:stretch; width:100%; height:100%; min-height:0; border-radius:48% 48% 3px 3px / 12% 12% 3px 3px;
+}
+.graduation-page .graduation-final-layout .graduation-portrait img {
+  width:100%; height:100%; min-height:100%; object-fit:cover; object-position:center;
+}
+.graduation-page .graduation-hearts span { color:rgba(199,105,139,.18); }
+.graduation-page .graduation-gallery.will-reveal { opacity:0; transform:translateY(34px); }
+.graduation-page .graduation-gallery.will-reveal.is-visible {
+  opacity:1; transform:translateY(0); transition:opacity .72s ease,transform .72s ease;
+}
+.graduation-page .graduation-gallery.will-reveal .graduation-row { opacity:0; transform:translateY(18px); }
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row {
+  opacity:1; transform:translateY(0); transition:opacity .6s ease,transform .6s ease;
+}
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row:nth-child(2) { transition-delay:.08s; }
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row:nth-child(3) { transition-delay:.16s; }
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row:nth-child(4) { transition-delay:.24s; }
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row:nth-child(5) { transition-delay:.32s; }
+.graduation-page .graduation-gallery.will-reveal.is-visible .graduation-row:nth-child(6) { transition-delay:.4s; }
+@media(max-width:700px) {
+  .graduation-page .graduation-introduction { margin-bottom:3rem; }
+  .graduation-page .graduation-final-layout { grid-template-columns:1fr; gap:2rem; }
+  .graduation-page .graduation-final-layout .graduation-portrait { height:auto; max-width:480px; justify-self:center; }
+  .graduation-page .graduation-final-layout .graduation-portrait img { height:auto; min-height:0; object-fit:contain; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .graduation-page .graduation-gallery.will-reveal,
+  .graduation-page .graduation-gallery.will-reveal .graduation-row { opacity:1; transform:none; transition:none; }
+}
